@@ -1,0 +1,24 @@
+version: '3'
+services:
+  clr_backend_d8_db:
+    image: mysql:5.7.8
+    command: --max_allowed_packet=32505856 #Set max_allowed_packet to 256M
+    environment:
+      MYSQL_DATABASE: clr_backend_d8
+      MYSQL_ROOT_PASSWORD: clr_backend_d8
+    ports:
+      - "3306:3306"
+    volumes:
+      - clr_backend_d8_db_data:/var/lib/mysql
+    restart: always
+  clr_backend_d8_drupal:
+    depends_on:
+      - clr_backend_d8_db
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - ../docroot:/app
+    restart: always
+volumes:
+  clr_backend_d8_db_data:

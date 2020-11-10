@@ -1,0 +1,13 @@
+{
+    "name": "epub",
+    "type": "drupal-module",
+    "description": "Provides a epub generator",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/epub",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/epub",
+        "source": "http://cgit.drupalcode.org/epub",
+    },
+}
