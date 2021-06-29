@@ -1,0 +1,38 @@
+uuid: da0e6b3e-4deb-4811-ba10-e4e316ebf70c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.dailyscrum.body
+    - field.field.node.dailyscrum.field_datum
+    - field.field.node.dailyscrum.field_gestern
+    - field.field.node.dailyscrum.field_heute
+    - field.field.node.dailyscrum.field_probleme
+    - node.type.dailyscrum
+  module:
+    - text
+    - user
+id: node.dailyscrum.teaser
+targetEntityType: node
+bundle: dailyscrum
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_datum: true
+  field_gestern: true
+  field_heute: true
+  field_probleme: true

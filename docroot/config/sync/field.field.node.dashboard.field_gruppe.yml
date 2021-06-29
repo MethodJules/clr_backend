@@ -1,0 +1,23 @@
+uuid: 1cad93cc-3ef4-43d1-a3b1-d05e1ed1aaa0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_gruppe
+    - node.type.dashboard
+id: node.dashboard.field_gruppe
+field_name: field_gruppe
+entity_type: node
+bundle: dashboard
+label: Gruppe
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

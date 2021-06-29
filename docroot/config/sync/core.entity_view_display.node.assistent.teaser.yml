@@ -1,0 +1,34 @@
+uuid: fc597548-a921-4a13-989f-b70f2b65e99e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.assistent.body
+    - field.field.node.assistent.field_hilfstext
+    - field.field.node.assistent.field_position
+    - node.type.assistent
+  module:
+    - text
+    - user
+id: node.assistent.teaser
+targetEntityType: node
+bundle: assistent
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_hilfstext: true
+  field_position: true

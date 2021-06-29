@@ -1,0 +1,23 @@
+uuid: 2629e1f4-f3f6-4d09-9ac6-ecb95cdc5f43
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sichtbarkeit
+    - node.type.gruppenmitglied
+id: node.gruppenmitglied.field_sichtbarkeit
+field_name: field_sichtbarkeit
+entity_type: node
+bundle: gruppenmitglied
+label: Sichtbarkeit
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

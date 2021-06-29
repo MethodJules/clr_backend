@@ -1,0 +1,46 @@
+uuid: 502ac8f6-0fd1-489a-be6a-63e77004fb72
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.postfach.body
+    - field.field.node.postfach.field_nachrichten
+    - field.field.node.postfach.field_nutzerid
+    - node.type.postfach
+  module:
+    - text
+    - user
+id: node.postfach.default
+targetEntityType: node
+bundle: postfach
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_nachrichten:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_nutzerid:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

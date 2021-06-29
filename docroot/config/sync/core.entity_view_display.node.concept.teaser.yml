@@ -1,0 +1,30 @@
+uuid: db7bf1e6-db38-4e1d-b606-793d854ae9e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.concept.body
+    - node.type.concept
+  module:
+    - text
+    - user
+id: node.concept.teaser
+targetEntityType: node
+bundle: concept
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

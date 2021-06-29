@@ -1,0 +1,23 @@
+uuid: 3928526e-09b1-46ed-b0d4-ecc2ee94533e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sichtbarkeit
+    - node.type.dashboard
+id: node.dashboard.field_sichtbarkeit
+field_name: field_sichtbarkeit
+entity_type: node
+bundle: dashboard
+label: Sichtbarkeit
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

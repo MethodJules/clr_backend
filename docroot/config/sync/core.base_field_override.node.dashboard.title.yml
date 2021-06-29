@@ -1,0 +1,18 @@
+uuid: f82b95bc-f929-4414-a968-6441c19bd6d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.dashboard
+id: node.dashboard.title
+field_name: title
+entity_type: node
+bundle: dashboard
+label: Dashboard
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

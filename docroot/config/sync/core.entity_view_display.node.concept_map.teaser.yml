@@ -1,0 +1,34 @@
+uuid: 35b4e1ea-c337-45a0-b8b3-066674a6610a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.concept_map.body
+    - field.field.node.concept_map.field_conceptmap_concepts
+    - field.field.node.concept_map.field_conceptmap_relationships
+    - node.type.concept_map
+  module:
+    - text
+    - user
+id: node.concept_map.teaser
+targetEntityType: node
+bundle: concept_map
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_conceptmap_concepts: true
+  field_conceptmap_relationships: true

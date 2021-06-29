@@ -1,0 +1,21 @@
+uuid: 7b347adc-f8f4-4802-be91-29f0c831aceb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.to_dos
+  module:
+    - datetime
+id: node.to_dos.field_date
+field_name: field_date
+entity_type: node
+bundle: to_dos
+label: date
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,36 @@
+uuid: 0cccb200-2674-4524-bb98-714ee1c2e10d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.outputdateien.body
+    - field.field.node.outputdateien.field_bezeichnung
+    - field.field.node.outputdateien.field_output_datei
+    - field.field.node.outputdateien.field_phasenid
+    - node.type.outputdateien
+  module:
+    - text
+    - user
+id: node.outputdateien.teaser
+targetEntityType: node
+bundle: outputdateien
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_bezeichnung: true
+  field_output_datei: true
+  field_phasenid: true

@@ -1,0 +1,23 @@
+uuid: 10ddf0fe-efaa-4776-a318-64f020e123b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.inputdateien
+  module:
+    - text
+id: node.inputdateien.body
+field_name: body
+entity_type: node
+bundle: inputdateien
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

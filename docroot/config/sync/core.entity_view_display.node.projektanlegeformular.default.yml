@@ -1,0 +1,55 @@
+uuid: fa2d966c-ba7d-4459-9eb9-d01af9e5b23b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.projektanlegeformular.body
+    - field.field.node.projektanlegeformular.field_betreuender_dozent
+    - field.field.node.projektanlegeformular.field_externe_mitwirkende
+    - field.field.node.projektanlegeformular.field_titel
+    - node.type.projektanlegeformular
+  module:
+    - text
+    - user
+id: node.projektanlegeformular.default
+targetEntityType: node
+bundle: projektanlegeformular
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_betreuender_dozent:
+    weight: 104
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_externe_mitwirkende:
+    weight: 105
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_titel:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

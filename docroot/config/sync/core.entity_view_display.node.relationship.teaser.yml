@@ -1,0 +1,34 @@
+uuid: 9a3174d3-dd5e-4ad2-a5de-e1a905583106
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.relationship.body
+    - field.field.node.relationship.field_sid
+    - field.field.node.relationship.field_tid
+    - node.type.relationship
+  module:
+    - text
+    - user
+id: node.relationship.teaser
+targetEntityType: node
+bundle: relationship
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_sid: true
+  field_tid: true

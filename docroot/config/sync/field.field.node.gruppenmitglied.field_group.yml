@@ -1,0 +1,28 @@
+uuid: eabdeabd-5962-49a6-aca4-47b10fce8045
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_group
+    - node.type.gruppe
+    - node.type.gruppenmitglied
+id: node.gruppenmitglied.field_group
+field_name: field_group
+entity_type: node
+bundle: gruppenmitglied
+label: Group_ID
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      gruppe: gruppe
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

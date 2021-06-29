@@ -1,0 +1,14 @@
+uuid: b7c8dcaa-4110-4f72-91e5-80597ae64a61
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.lecturer
+  module:
+    - user
+id: user_remove_role_action.lecturer
+label: 'Remove the Lecturer role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: lecturer

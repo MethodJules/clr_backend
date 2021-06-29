@@ -1,0 +1,42 @@
+uuid: e1b39336-2c47-47ef-8f46-f07b7530ab96
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.forum.body
+    - field.field.node.forum.field_antwort
+    - field.field.node.forum.field_eingabe
+    - field.field.node.forum.field_kommentare
+    - field.field.node.forum.field_projektid
+    - field.field.node.forum.field_timestamp
+    - field.field.node.forum.field_titel
+    - node.type.forum
+  module:
+    - text
+    - user
+id: node.forum.teaser
+targetEntityType: node
+bundle: forum
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_antwort: true
+  field_eingabe: true
+  field_kommentare: true
+  field_projektid: true
+  field_timestamp: true
+  field_titel: true

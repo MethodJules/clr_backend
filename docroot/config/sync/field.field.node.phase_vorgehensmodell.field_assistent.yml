@@ -1,0 +1,28 @@
+uuid: b53714cb-d277-4273-807e-40608ad48421
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_assistent
+    - node.type.phase_vorgehensmodell
+id: node.phase_vorgehensmodell.field_assistent
+field_name: field_assistent
+entity_type: node
+bundle: phase_vorgehensmodell
+label: assistent
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

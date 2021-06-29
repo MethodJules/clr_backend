@@ -1,0 +1,29 @@
+uuid: 98aba50b-f8c4-4a13-8bba-e82b8fca000e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sichten
+    - node.type.reflexionstemplate
+    - taxonomy.vocabulary.sichten
+id: node.reflexionstemplate.field_sichten
+field_name: field_sichten
+entity_type: node
+bundle: reflexionstemplate
+label: Sichten
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      sichten: sichten
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

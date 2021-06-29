@@ -1,0 +1,21 @@
+uuid: e4e357be-5305-4d1d-b3b7-ecf7585a5ada
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_gruppenmitglieder
+    - node.type.projekt
+id: node.projekt.field_gruppenmitglieder
+field_name: field_gruppenmitglieder
+entity_type: node
+bundle: projekt
+label: Gruppenmitglieder
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings: {  }
+field_type: entity_reference

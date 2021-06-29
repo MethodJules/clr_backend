@@ -1,0 +1,28 @@
+uuid: 371325f6-83a0-40e6-9f6a-3165a813791b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_phasenid
+    - node.type.outputdateien
+    - node.type.phase_vorgehensmodell
+id: node.outputdateien.field_phasenid
+field_name: field_phasenid
+entity_type: node
+bundle: outputdateien
+label: PhasenID
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      phase_vorgehensmodell: phase_vorgehensmodell
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

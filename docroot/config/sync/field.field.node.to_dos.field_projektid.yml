@@ -1,0 +1,28 @@
+uuid: a3e8e17d-a2ed-4d2b-bfd7-e5377f8e5d7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_projektid
+    - node.type.projekt
+    - node.type.to_dos
+id: node.to_dos.field_projektid
+field_name: field_projektid
+entity_type: node
+bundle: to_dos
+label: ProjektId
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      projekt: projekt
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

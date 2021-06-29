@@ -1,0 +1,23 @@
+uuid: c09f888b-f71b-4958-9105-7dde26a26d30
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.projektanlegeformular
+  module:
+    - text
+id: node.projektanlegeformular.body
+field_name: body
+entity_type: node
+bundle: projektanlegeformular
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

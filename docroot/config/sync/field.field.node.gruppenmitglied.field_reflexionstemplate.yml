@@ -1,0 +1,23 @@
+uuid: 653ab298-6354-403c-9d86-2667d681a84d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_reflexionstemplate
+    - node.type.gruppenmitglied
+id: node.gruppenmitglied.field_reflexionstemplate
+field_name: field_reflexionstemplate
+entity_type: node
+bundle: gruppenmitglied
+label: Reflexionstemplate
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

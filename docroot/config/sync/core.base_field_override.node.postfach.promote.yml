@@ -1,0 +1,22 @@
+uuid: 00312916-9533-4cc5-b0e1-df411d381927
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.postfach
+id: node.postfach.promote
+field_name: promote
+entity_type: node
+bundle: postfach
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

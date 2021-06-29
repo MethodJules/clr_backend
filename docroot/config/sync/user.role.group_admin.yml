@@ -1,0 +1,9 @@
+uuid: 2b818c73-3e07-4a6a-93c2-54737b3dc4b2
+langcode: en
+status: true
+dependencies: {  }
+id: group_admin
+label: Gruppenadmin
+weight: 6
+is_admin: null
+permissions: {  }

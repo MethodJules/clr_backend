@@ -1,0 +1,20 @@
+uuid: 9845c8e1-b553-41ad-be96-4d17487c5404
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - user
+id: node.field_externe_mitwirkende
+field_name: field_externe_mitwirkende
+entity_type: node
+type: entity_reference
+settings:
+  target_type: user
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

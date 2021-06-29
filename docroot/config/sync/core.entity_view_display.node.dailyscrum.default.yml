@@ -1,0 +1,66 @@
+uuid: 7374e863-16b9-4e92-8e12-a63450eef254
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.dailyscrum.body
+    - field.field.node.dailyscrum.field_datum
+    - field.field.node.dailyscrum.field_gestern
+    - field.field.node.dailyscrum.field_heute
+    - field.field.node.dailyscrum.field_probleme
+    - node.type.dailyscrum
+  module:
+    - datetime
+    - text
+    - user
+id: node.dailyscrum.default
+targetEntityType: node
+bundle: dailyscrum
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_datum:
+    weight: 102
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_gestern:
+    weight: 103
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_heute:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_probleme:
+    weight: 105
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

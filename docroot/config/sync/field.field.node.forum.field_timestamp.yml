@@ -1,0 +1,21 @@
+uuid: fafe18ba-cfda-4c35-ae10-c06731a0aafc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_timestamp
+    - node.type.forum
+id: node.forum.field_timestamp
+field_name: field_timestamp
+entity_type: node
+bundle: forum
+label: Timestamp
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1622117574
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

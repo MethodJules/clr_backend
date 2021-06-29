@@ -1,0 +1,42 @@
+uuid: a094a478-d73d-4445-9b27-7ee038fc3473
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.projekt.body
+    - field.field.node.projekt.field_betreuender_dozent
+    - field.field.node.projekt.field_externe_mitwirkende
+    - field.field.node.projekt.field_gruppenadministrator
+    - field.field.node.projekt.field_gruppenmitglieder
+    - field.field.node.projekt.field_kurzbeschreibung
+    - field.field.node.projekt.field_schlagworter
+    - node.type.projekt
+  module:
+    - text
+    - user
+id: node.projekt.teaser
+targetEntityType: node
+bundle: projekt
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_betreuender_dozent: true
+  field_externe_mitwirkende: true
+  field_gruppenadministrator: true
+  field_gruppenmitglieder: true
+  field_kurzbeschreibung: true
+  field_schlagworter: true

@@ -1,0 +1,23 @@
+uuid: 4fea0010-e50b-4024-8d76-8d0497311045
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.gruppe
+  module:
+    - text
+id: node.gruppe.body
+field_name: body
+entity_type: node
+bundle: gruppe
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

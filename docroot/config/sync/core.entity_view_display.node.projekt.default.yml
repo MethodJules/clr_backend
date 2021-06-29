@@ -1,0 +1,82 @@
+uuid: 342cfc6e-f307-4241-abba-99aaf71323f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.projekt.body
+    - field.field.node.projekt.field_betreuender_dozent
+    - field.field.node.projekt.field_externe_mitwirkende
+    - field.field.node.projekt.field_gruppenadministrator
+    - field.field.node.projekt.field_gruppenmitglieder
+    - field.field.node.projekt.field_kurzbeschreibung
+    - field.field.node.projekt.field_schlagworter
+    - node.type.projekt
+  module:
+    - text
+    - user
+id: node.projekt.default
+targetEntityType: node
+bundle: projekt
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_betreuender_dozent:
+    weight: 105
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_externe_mitwirkende:
+    weight: 104
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_gruppenadministrator:
+    weight: 107
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_gruppenmitglieder:
+    weight: 106
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_kurzbeschreibung:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_schlagworter:
+    weight: 103
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

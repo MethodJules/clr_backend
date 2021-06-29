@@ -1,0 +1,19 @@
+uuid: 98212f15-2557-4898-a1d3-bc71cc0e2554
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_schlussfolgern
+field_name: field_schlussfolgern
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

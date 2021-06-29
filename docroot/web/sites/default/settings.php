@@ -805,4 +805,5 @@ $databases['default']['default'] = array (
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
 );
-$settings['config_sync_directory'] = 'sites/default/files/config_DOtcv7u1K9qni9mE1-T8z5Ospfbg2FAWgFYC1gvELV9Mg-SZif7KBbb5pejx2IWd7d_vomLzxA/sync';
+#$settings['config_sync_directory'] = 'sites/default/files/config_DOtcv7u1K9qni9mE1-T8z5Ospfbg2FAWgFYC1gvELV9Mg-SZif7KBbb5pejx2IWd7d_vomLzxA/sync';
+$settings['config_sync_directory'] = '../config/sync';

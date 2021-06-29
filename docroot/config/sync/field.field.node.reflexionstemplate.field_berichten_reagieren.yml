@@ -1,0 +1,19 @@
+uuid: 7efbc79f-3630-4565-b415-9b029e98ce39
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_berichten_reagieren
+    - node.type.reflexionstemplate
+id: node.reflexionstemplate.field_berichten_reagieren
+field_name: field_berichten_reagieren
+entity_type: node
+bundle: reflexionstemplate
+label: berichten_reagieren
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,19 @@
+uuid: ca59a00f-028d-42aa-bcb0-0837f984a194
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nachrichten
+    - node.type.postfach
+id: node.postfach.field_nachrichten
+field_name: field_nachrichten
+entity_type: node
+bundle: postfach
+label: Nachrichten
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

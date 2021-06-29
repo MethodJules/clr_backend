@@ -1,0 +1,21 @@
+uuid: e6eb9f05-23da-4c07-9f67-91b313202506
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_antwort
+field_name: field_antwort
+entity_type: node
+type: list_string
+settings:
+  allowed_values: {  }
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 10
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

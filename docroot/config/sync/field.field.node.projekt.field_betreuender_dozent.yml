@@ -1,0 +1,28 @@
+uuid: fc5d5259-78ff-4185-b86b-e5d3da872510
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_betreuender_dozent
+    - node.type.projekt
+id: node.projekt.field_betreuender_dozent
+field_name: field_betreuender_dozent
+entity_type: node
+bundle: projekt
+label: 'betreuender Dozent'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

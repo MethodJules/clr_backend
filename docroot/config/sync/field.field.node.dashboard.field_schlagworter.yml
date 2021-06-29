@@ -1,0 +1,19 @@
+uuid: 57dd59a7-6ebe-4416-872d-b38bd96171b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_schlagworter
+    - node.type.dashboard
+id: node.dashboard.field_schlagworter
+field_name: field_schlagworter
+entity_type: node
+bundle: dashboard
+label: Schlagwörter
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,19 @@
+uuid: 41299805-8a37-4e2f-b94c-b0af2db72ecd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_matrikelnummer
+    - node.type.student
+id: node.student.field_matrikelnummer
+field_name: field_matrikelnummer
+entity_type: node
+bundle: student
+label: Matrikelnummer
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

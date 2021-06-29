@@ -1,0 +1,28 @@
+uuid: 93f9196e-5e87-4067-a408-d142d6a26fb7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nachname
+    - node.type.student
+id: node.student.field_nachname
+field_name: field_nachname
+entity_type: node
+bundle: student
+label: Nachname
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

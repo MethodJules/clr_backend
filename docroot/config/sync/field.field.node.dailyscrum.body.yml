@@ -1,0 +1,23 @@
+uuid: 0065188e-cce2-4986-b85c-c6f1b810a6f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.dailyscrum
+  module:
+    - text
+id: node.dailyscrum.body
+field_name: body
+entity_type: node
+bundle: dailyscrum
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

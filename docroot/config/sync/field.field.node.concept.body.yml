@@ -1,0 +1,23 @@
+uuid: d70d194a-106e-404e-9b9f-f8261378eb3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.concept
+  module:
+    - text
+id: node.concept.body
+field_name: body
+entity_type: node
+bundle: concept
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

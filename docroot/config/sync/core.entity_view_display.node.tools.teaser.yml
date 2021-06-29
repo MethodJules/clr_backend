@@ -1,0 +1,34 @@
+uuid: cc35ee3d-f6ff-467d-93b8-6d96f8eff2ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.tools.body
+    - field.field.node.tools.field_benutzt
+    - field.field.node.tools.field_phasenid
+    - node.type.tools
+  module:
+    - text
+    - user
+id: node.tools.teaser
+targetEntityType: node
+bundle: tools
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_benutzt: true
+  field_phasenid: true

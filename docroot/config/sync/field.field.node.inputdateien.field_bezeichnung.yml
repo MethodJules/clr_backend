@@ -1,0 +1,19 @@
+uuid: e3e09133-7401-442a-ba75-2faa76052188
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bezeichnung
+    - node.type.inputdateien
+id: node.inputdateien.field_bezeichnung
+field_name: field_bezeichnung
+entity_type: node
+bundle: inputdateien
+label: bezeichnung
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

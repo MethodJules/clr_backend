@@ -1,0 +1,19 @@
+uuid: 05686a3f-c418-4981-81d9-48da4aec8064
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_betreuer
+    - node.type.gruppe
+id: node.gruppe.field_betreuer
+field_name: field_betreuer
+entity_type: node
+bundle: gruppe
+label: Betreuer
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

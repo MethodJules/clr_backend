@@ -1,0 +1,40 @@
+uuid: d9931903-6d48-43d6-83db-97def4fa5305
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.chat.body
+    - field.field.node.chat.field_absender
+    - field.field.node.chat.field_datei
+    - field.field.node.chat.field_eingabe
+    - field.field.node.chat.field_empfanger
+    - field.field.node.chat.field_projektid
+    - node.type.chat
+  module:
+    - text
+    - user
+id: node.chat.teaser
+targetEntityType: node
+bundle: chat
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_absender: true
+  field_datei: true
+  field_eingabe: true
+  field_empfanger: true
+  field_projektid: true

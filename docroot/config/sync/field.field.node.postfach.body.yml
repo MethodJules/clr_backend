@@ -1,0 +1,23 @@
+uuid: afd3b780-2982-4c9d-bc76-da8e64b5b784
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.postfach
+  module:
+    - text
+id: node.postfach.body
+field_name: body
+entity_type: node
+bundle: postfach
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

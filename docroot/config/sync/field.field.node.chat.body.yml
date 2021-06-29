@@ -1,0 +1,23 @@
+uuid: 70c7046c-a9d5-4ecb-b20d-b8a3db48b032
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.chat
+  module:
+    - text
+id: node.chat.body
+field_name: body
+entity_type: node
+bundle: chat
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

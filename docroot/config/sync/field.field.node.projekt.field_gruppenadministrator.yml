@@ -1,0 +1,21 @@
+uuid: f25fa3a0-047b-4c7a-9a7e-929a5c5969d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_gruppenadministrator
+    - node.type.projekt
+id: node.projekt.field_gruppenadministrator
+field_name: field_gruppenadministrator
+entity_type: node
+bundle: projekt
+label: Gruppenadministrator
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings: {  }
+field_type: entity_reference

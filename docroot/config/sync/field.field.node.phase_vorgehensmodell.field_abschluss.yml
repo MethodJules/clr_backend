@@ -1,0 +1,23 @@
+uuid: ed33369c-7295-408b-b41a-8f3f0f4629d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_abschluss
+    - node.type.phase_vorgehensmodell
+id: node.phase_vorgehensmodell.field_abschluss
+field_name: field_abschluss
+entity_type: node
+bundle: phase_vorgehensmodell
+label: abschluss
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

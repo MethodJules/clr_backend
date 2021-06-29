@@ -1,0 +1,23 @@
+uuid: aeadeed5-8165-4a41-968c-1ee67124f0c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_projektlink
+    - node.type.gruppenmitglied
+  module:
+    - link
+id: node.gruppenmitglied.field_projektlink
+field_name: field_projektlink
+entity_type: node
+bundle: gruppenmitglied
+label: projektlink
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

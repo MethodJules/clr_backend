@@ -1,0 +1,18 @@
+uuid: dd1268a3-3703-4e1c-876a-108e788ac0be
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Reflexionstemplate
+type: reflexionstemplate
+description: 'This is a content type to create a template for reflections.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

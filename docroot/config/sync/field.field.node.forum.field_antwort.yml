@@ -1,0 +1,21 @@
+uuid: c4eb5e3a-a7ac-4ccd-aa3c-ea80586e3853
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_antwort
+    - node.type.forum
+  module:
+    - options
+id: node.forum.field_antwort
+field_name: field_antwort
+entity_type: node
+bundle: forum
+label: Antwort
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

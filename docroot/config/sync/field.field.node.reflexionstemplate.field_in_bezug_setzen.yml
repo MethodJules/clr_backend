@@ -1,0 +1,19 @@
+uuid: 877efc84-ead6-49ef-875b-02653c8e48d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_in_bezug_setzen
+    - node.type.reflexionstemplate
+id: node.reflexionstemplate.field_in_bezug_setzen
+field_name: field_in_bezug_setzen
+entity_type: node
+bundle: reflexionstemplate
+label: in_bezug_setzen
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

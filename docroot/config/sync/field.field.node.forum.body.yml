@@ -1,0 +1,23 @@
+uuid: 68665768-2d80-4cd9-82fe-b2d6010c51dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.forum
+  module:
+    - text
+id: node.forum.body
+field_name: body
+entity_type: node
+bundle: forum
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

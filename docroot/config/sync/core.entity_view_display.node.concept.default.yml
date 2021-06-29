@@ -1,0 +1,28 @@
+uuid: 9d15887e-a88c-4ac9-86ce-89a0ddb1cd61
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.concept.body
+    - node.type.concept
+  module:
+    - text
+    - user
+id: node.concept.default
+targetEntityType: node
+bundle: concept
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

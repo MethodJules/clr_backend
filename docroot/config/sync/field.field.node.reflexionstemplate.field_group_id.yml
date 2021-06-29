@@ -1,0 +1,19 @@
+uuid: fabb6d59-6f9f-42fa-bbb1-5b6297cd8147
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_group_id
+    - node.type.reflexionstemplate
+id: node.reflexionstemplate.field_group_id
+field_name: field_group_id
+entity_type: node
+bundle: reflexionstemplate
+label: group_id
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

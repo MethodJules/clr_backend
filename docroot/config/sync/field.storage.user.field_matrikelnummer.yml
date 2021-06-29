@@ -1,0 +1,20 @@
+uuid: a110df1b-0220-4ac9-ab10-cd018954fb55
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_matrikelnummer
+field_name: field_matrikelnummer
+entity_type: user
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

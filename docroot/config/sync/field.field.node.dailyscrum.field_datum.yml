@@ -1,0 +1,21 @@
+uuid: 2f0a9c3e-cf80-4c8b-892f-5bd9dfa4bb21
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_datum
+    - node.type.dailyscrum
+  module:
+    - datetime
+id: node.dailyscrum.field_datum
+field_name: field_datum
+entity_type: node
+bundle: dailyscrum
+label: Datum
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

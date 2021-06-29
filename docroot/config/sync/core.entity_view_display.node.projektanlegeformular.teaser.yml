@@ -1,0 +1,36 @@
+uuid: 6705291d-c51f-4632-b8f5-c40793f6ed21
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.projektanlegeformular.body
+    - field.field.node.projektanlegeformular.field_betreuender_dozent
+    - field.field.node.projektanlegeformular.field_externe_mitwirkende
+    - field.field.node.projektanlegeformular.field_titel
+    - node.type.projektanlegeformular
+  module:
+    - text
+    - user
+id: node.projektanlegeformular.teaser
+targetEntityType: node
+bundle: projektanlegeformular
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_betreuender_dozent: true
+  field_externe_mitwirkende: true
+  field_titel: true

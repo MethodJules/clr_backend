@@ -1,0 +1,19 @@
+uuid: e94752a6-552e-492c-a047-cbf04980e3d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_kurzbeschreibung
+    - node.type.projekt
+id: node.projekt.field_kurzbeschreibung
+field_name: field_kurzbeschreibung
+entity_type: node
+bundle: projekt
+label: Kurzbeschreibung
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

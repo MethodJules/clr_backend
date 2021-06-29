@@ -1,0 +1,21 @@
+uuid: f920cd0f-eb80-4a63-9db8-55870fbb1b26
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_empfanger
+    - node.type.chat
+id: node.chat.field_empfanger
+field_name: field_empfanger
+entity_type: node
+bundle: chat
+label: Empfänger
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings: {  }
+field_type: entity_reference

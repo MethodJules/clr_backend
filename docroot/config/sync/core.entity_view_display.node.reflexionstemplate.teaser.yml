@@ -1,0 +1,46 @@
+uuid: 75265d08-dff5-4b6c-9f89-8ab23d7c4e6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.reflexionstemplate.body
+    - field.field.node.reflexionstemplate.field_berichten_reagieren
+    - field.field.node.reflexionstemplate.field_group_id
+    - field.field.node.reflexionstemplate.field_in_bezug_setzen
+    - field.field.node.reflexionstemplate.field_phasenid
+    - field.field.node.reflexionstemplate.field_rekonstruieren
+    - field.field.node.reflexionstemplate.field_schlussfolgern
+    - field.field.node.reflexionstemplate.field_sichten
+    - field.field.node.reflexionstemplate.field_user
+    - node.type.reflexionstemplate
+  module:
+    - text
+    - user
+id: node.reflexionstemplate.teaser
+targetEntityType: node
+bundle: reflexionstemplate
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_berichten_reagieren: true
+  field_group_id: true
+  field_in_bezug_setzen: true
+  field_phasenid: true
+  field_rekonstruieren: true
+  field_schlussfolgern: true
+  field_sichten: true
+  field_user: true

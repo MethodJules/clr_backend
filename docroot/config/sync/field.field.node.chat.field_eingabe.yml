@@ -1,0 +1,19 @@
+uuid: 0f64b810-6f81-42ee-a5d1-efe0e97f6f7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_eingabe
+    - node.type.chat
+id: node.chat.field_eingabe
+field_name: field_eingabe
+entity_type: node
+bundle: chat
+label: Nachricht
+description: 'Die Nachricht wird hier eingetippt'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

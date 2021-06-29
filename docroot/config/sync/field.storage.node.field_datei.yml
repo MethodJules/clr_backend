@@ -1,0 +1,23 @@
+uuid: 9f7ca8d8-d9b9-4f08-a9f4-68d3df98c8cb
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - node
+id: node.field_datei
+field_name: field_datei
+entity_type: node
+type: file
+settings:
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  target_type: file
+module: file
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

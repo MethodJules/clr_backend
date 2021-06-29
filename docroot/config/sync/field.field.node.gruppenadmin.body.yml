@@ -1,0 +1,23 @@
+uuid: 61496b72-301d-45ca-b697-abfaf9ce0de4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.gruppenadmin
+  module:
+    - text
+id: node.gruppenadmin.body
+field_name: body
+entity_type: node
+bundle: gruppenadmin
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

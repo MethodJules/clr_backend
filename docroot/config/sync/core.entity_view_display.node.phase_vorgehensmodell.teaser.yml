@@ -1,0 +1,38 @@
+uuid: 6940f9fd-dbf9-4a48-9506-5fc3bc3e06b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.phase_vorgehensmodell.body
+    - field.field.node.phase_vorgehensmodell.field_abschluss
+    - field.field.node.phase_vorgehensmodell.field_assistent
+    - field.field.node.phase_vorgehensmodell.field_phase_number
+    - field.field.node.phase_vorgehensmodell.field_projektid
+    - node.type.phase_vorgehensmodell
+  module:
+    - text
+    - user
+id: node.phase_vorgehensmodell.teaser
+targetEntityType: node
+bundle: phase_vorgehensmodell
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_abschluss: true
+  field_assistent: true
+  field_phase_number: true
+  field_projektid: true

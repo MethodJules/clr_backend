@@ -1,0 +1,22 @@
+uuid: f86f95da-0b74-4e45-a36a-f12b15cc0325
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.concept_map
+id: node.concept_map.promote
+field_name: promote
+entity_type: node
+bundle: concept_map
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

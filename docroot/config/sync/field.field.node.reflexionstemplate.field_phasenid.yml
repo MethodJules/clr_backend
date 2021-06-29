@@ -1,0 +1,28 @@
+uuid: 90bf81bb-ebcc-4a8e-a5eb-8fa4bc26dbdf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_phasenid
+    - node.type.phase_vorgehensmodell
+    - node.type.reflexionstemplate
+id: node.reflexionstemplate.field_phasenid
+field_name: field_phasenid
+entity_type: node
+bundle: reflexionstemplate
+label: PhasenID
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      phase_vorgehensmodell: phase_vorgehensmodell
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

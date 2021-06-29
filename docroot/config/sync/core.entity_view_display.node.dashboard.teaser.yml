@@ -1,0 +1,44 @@
+uuid: 0afb84e7-7593-496e-8828-90a9f84ef963
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.dashboard.body
+    - field.field.node.dashboard.field_betreuender_dozent
+    - field.field.node.dashboard.field_externe_mitwirkende
+    - field.field.node.dashboard.field_gruppe
+    - field.field.node.dashboard.field_kurzbeschreibung
+    - field.field.node.dashboard.field_projekttitel
+    - field.field.node.dashboard.field_schlagworter
+    - field.field.node.dashboard.field_sichtbarkeit
+    - node.type.dashboard
+  module:
+    - text
+    - user
+id: node.dashboard.teaser
+targetEntityType: node
+bundle: dashboard
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_betreuender_dozent: true
+  field_externe_mitwirkende: true
+  field_gruppe: true
+  field_kurzbeschreibung: true
+  field_projekttitel: true
+  field_schlagworter: true
+  field_sichtbarkeit: true

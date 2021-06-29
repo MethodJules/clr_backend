@@ -1,0 +1,21 @@
+uuid: 88b93450-79e2-4522-833b-9e8c2a6bf63b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_kommentare
+    - node.type.forum
+  module:
+    - options
+id: node.forum.field_kommentare
+field_name: field_kommentare
+entity_type: node
+bundle: forum
+label: Kommentare
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

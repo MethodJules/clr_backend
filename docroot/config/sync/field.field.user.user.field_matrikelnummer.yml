@@ -1,0 +1,24 @@
+uuid: 34be436d-d715-4c30-8c68-2ad8b0a61150
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_matrikelnummer
+  module:
+    - user
+id: user.user.field_matrikelnummer
+field_name: field_matrikelnummer
+entity_type: user
+bundle: user
+label: Matrikelnummer
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,28 @@
+uuid: 44760e55-54af-4038-99a6-5f3a73505214
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_absender
+    - node.type.chat
+id: node.chat.field_absender
+field_name: field_absender
+entity_type: node
+bundle: chat
+label: Absender
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

@@ -1,0 +1,28 @@
+uuid: daf0d073-1cae-4192-bd7d-1646eaff655b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_projektid
+    - node.type.forum
+    - node.type.projekt
+id: node.forum.field_projektid
+field_name: field_projektid
+entity_type: node
+bundle: forum
+label: ProjektId
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      projekt: projekt
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,23 @@
+uuid: 5403245c-938e-4d56-8cfc-1070d71a4dda
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.assistent
+  module:
+    - text
+id: node.assistent.body
+field_name: body
+entity_type: node
+bundle: assistent
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

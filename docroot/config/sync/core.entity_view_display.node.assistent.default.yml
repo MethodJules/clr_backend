@@ -1,0 +1,47 @@
+uuid: 61088ddd-4362-40f6-8f33-9ec26443aeb0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.assistent.body
+    - field.field.node.assistent.field_hilfstext
+    - field.field.node.assistent.field_position
+    - node.type.assistent
+  module:
+    - text
+    - user
+id: node.assistent.default
+targetEntityType: node
+bundle: assistent
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_hilfstext:
+    weight: 103
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_position:
+    weight: 104
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

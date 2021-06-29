@@ -1,0 +1,46 @@
+uuid: bbffd1a1-1131-4e35-a407-74e2020ec80b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.relationship.body
+    - field.field.node.relationship.field_sid
+    - field.field.node.relationship.field_tid
+    - node.type.relationship
+  module:
+    - text
+    - user
+id: node.relationship.default
+targetEntityType: node
+bundle: relationship
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_sid:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tid:
+    weight: 103
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

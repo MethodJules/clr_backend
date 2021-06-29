@@ -1,0 +1,19 @@
+uuid: 0fda4077-d58d-4ab3-965e-2990f88806f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_gestern
+    - node.type.dailyscrum
+id: node.dailyscrum.field_gestern
+field_name: field_gestern
+entity_type: node
+bundle: dailyscrum
+label: Gestern
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

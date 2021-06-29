@@ -1,0 +1,28 @@
+uuid: 8b8b6723-55a0-4b02-962c-a86a826900f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_projektid
+    - node.type.phase_vorgehensmodell
+    - node.type.projekt
+id: node.phase_vorgehensmodell.field_projektid
+field_name: field_projektid
+entity_type: node
+bundle: phase_vorgehensmodell
+label: ProjektId
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      projekt: projekt
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

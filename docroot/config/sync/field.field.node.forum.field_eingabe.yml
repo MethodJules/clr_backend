@@ -1,0 +1,19 @@
+uuid: 7dd61a06-d24c-4180-afa8-a10e11b8ebc1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_eingabe
+    - node.type.forum
+id: node.forum.field_eingabe
+field_name: field_eingabe
+entity_type: node
+bundle: forum
+label: Eingabe
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

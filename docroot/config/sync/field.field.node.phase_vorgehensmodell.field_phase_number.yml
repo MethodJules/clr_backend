@@ -1,0 +1,23 @@
+uuid: 23cd21a3-49ec-4b93-a2bd-8943afa00f6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_phase_number
+    - node.type.phase_vorgehensmodell
+id: node.phase_vorgehensmodell.field_phase_number
+field_name: field_phase_number
+entity_type: node
+bundle: phase_vorgehensmodell
+label: phase_number
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

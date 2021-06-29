@@ -1,0 +1,44 @@
+uuid: 896e48ef-da53-4cc2-bf9d-cd5d811dd292
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.student.body
+    - field.field.node.student.field_email
+    - field.field.node.student.field_matrikelnummer
+    - field.field.node.student.field_nachname
+    - field.field.node.student.field_password
+    - field.field.node.student.field_postfach_id
+    - field.field.node.student.field_sichtbarkeit
+    - field.field.node.student.field_vorname
+    - node.type.student
+  module:
+    - text
+    - user
+id: node.student.teaser
+targetEntityType: node
+bundle: student
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_email: true
+  field_matrikelnummer: true
+  field_nachname: true
+  field_password: true
+  field_postfach_id: true
+  field_sichtbarkeit: true
+  field_vorname: true

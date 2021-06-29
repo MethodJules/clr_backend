@@ -1,0 +1,74 @@
+uuid: ec2d858c-1610-41e1-8793-217fdaf8b462
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.chat.body
+    - field.field.node.chat.field_absender
+    - field.field.node.chat.field_datei
+    - field.field.node.chat.field_eingabe
+    - field.field.node.chat.field_empfanger
+    - field.field.node.chat.field_projektid
+    - node.type.chat
+  module:
+    - file
+    - text
+    - user
+id: node.chat.default
+targetEntityType: node
+bundle: chat
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_absender:
+    weight: 109
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_datei:
+    weight: 107
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_eingabe:
+    weight: 106
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_empfanger:
+    weight: 108
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_projektid:
+    weight: 110
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

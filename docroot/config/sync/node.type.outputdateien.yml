@@ -1,0 +1,18 @@
+uuid: 6362d4ca-f18f-4ed1-b037-e222af35a28c
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: OutputDateien
+type: outputdateien
+description: 'Documents or other forms of data which were produced in a phase'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

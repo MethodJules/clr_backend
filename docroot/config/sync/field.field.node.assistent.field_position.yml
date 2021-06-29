@@ -1,0 +1,23 @@
+uuid: d43110fc-9f1b-4b74-9fa5-75e1370f1877
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_position
+    - node.type.assistent
+id: node.assistent.field_position
+field_name: field_position
+entity_type: node
+bundle: assistent
+label: Position
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

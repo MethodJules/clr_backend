@@ -1,0 +1,34 @@
+uuid: 78515a20-f404-496b-b77f-88edbc64aaa1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.postfach.body
+    - field.field.node.postfach.field_nachrichten
+    - field.field.node.postfach.field_nutzerid
+    - node.type.postfach
+  module:
+    - text
+    - user
+id: node.postfach.teaser
+targetEntityType: node
+bundle: postfach
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_nachrichten: true
+  field_nutzerid: true

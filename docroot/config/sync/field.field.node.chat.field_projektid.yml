@@ -1,0 +1,28 @@
+uuid: 20071684-adf6-413e-bd86-9621df13eb0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_projektid
+    - node.type.chat
+    - node.type.projekt
+id: node.chat.field_projektid
+field_name: field_projektid
+entity_type: node
+bundle: chat
+label: ProjektId
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      projekt: projekt
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

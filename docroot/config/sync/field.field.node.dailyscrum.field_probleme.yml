@@ -1,0 +1,19 @@
+uuid: d1a771f8-7b57-4a9d-be50-1daf47b982a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_probleme
+    - node.type.dailyscrum
+id: node.dailyscrum.field_probleme
+field_name: field_probleme
+entity_type: node
+bundle: dailyscrum
+label: Probleme
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

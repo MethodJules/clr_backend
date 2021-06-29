@@ -1,0 +1,34 @@
+uuid: df0af2b8-9e3a-4806-ab0f-deb59bea4d48
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.inputdateien.body
+    - field.field.node.inputdateien.field_bezeichnung
+    - field.field.node.inputdateien.field_phasenid
+    - node.type.inputdateien
+  module:
+    - text
+    - user
+id: node.inputdateien.teaser
+targetEntityType: node
+bundle: inputdateien
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_bezeichnung: true
+  field_phasenid: true

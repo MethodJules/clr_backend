@@ -1,0 +1,48 @@
+uuid: 5e75e95e-091d-4e8c-9cc3-ed47ca811130
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.tools.body
+    - field.field.node.tools.field_benutzt
+    - field.field.node.tools.field_phasenid
+    - node.type.tools
+  module:
+    - text
+    - user
+id: node.tools.default
+targetEntityType: node
+bundle: tools
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_benutzt:
+    weight: 103
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_phasenid:
+    weight: 104
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

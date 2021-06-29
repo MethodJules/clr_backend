@@ -1,0 +1,23 @@
+uuid: 8282c12d-d3b2-4e8f-a46f-ad6ee427633e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bearbeitungsrecht
+    - node.type.gruppenmitglied
+id: node.gruppenmitglied.field_bearbeitungsrecht
+field_name: field_bearbeitungsrecht
+entity_type: node
+bundle: gruppenmitglied
+label: bearbeitungsrecht
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

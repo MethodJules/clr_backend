@@ -1,0 +1,37 @@
+uuid: 3bfc8c08-9d7b-4311-9dce-0af132b4c7cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.assistententext.body
+    - field.field.node.assistententext.field_phase
+    - node.type.assistententext
+  module:
+    - text
+    - user
+id: node.assistententext.default
+targetEntityType: node
+bundle: assistententext
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_phase:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }
