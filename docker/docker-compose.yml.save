@@ -21,20 +21,19 @@ services:
       - "traefik.enable=true"
       - "traefik.http.routers.clr_backend_d8_drupal.entrypoints=http"
       - "traefik.http.routers.clr_backend_d8_drupal.rule=Host(`clr-backend.x-navi.de`)"
-      - "traefik.http.middlewares.clr_backend_d8_drupal-https-redirect.redirectscheme.scheme=https"
-      - "traefik.http.routers.clr_backend_d8_drupal.middlewares=clr_backend_d8_drupal-https-redirect"
-      - "traefik.http.routers.clr_backend_d8_drupal-secure.entrypoints=https"
-      - "traefik.http.routers.clr_backend_d8_drupal-secure.rule=Host(`clr-backend.x-navi.de`)"
-      - "traefik.http.routers.clr_backend_d8_drupal-secure.tls=true"
-      - "traefik.http.routers.clr_backend_d8_drupal-secure.tls.certresolver=http"
-      - "traefik.http.routers.clr_backend_d8_drupal-secure.service=clr_backend_d8_drupal"
-      - "traefik.http.services.clr_backend_d8_drupal.loadbalancer.server.port=80"
+      - "traefik.http.middlewares.clr_backend_d8_drupal-https-redirect.redicrectscheme.scheme=https"
+      - "traefik.http.routers.clr_backend_d8_drupal=clr_backend_d8_drupal-https-redirect"
+      - "traefik.http.routers.wp-secure.entrypoints=https"
+      - "traefik.http.routers.wp-secure.rule=Host(`wordpress.euredomain.de`)"
+      - "traefik.http.routers.wp-secure.tls=true"
+      - "traefik.http.routers.wp-secure.tls.certresolver=http"
+      - "traefik.http.routers.wp-.service=clr_backend_d8_drupal"
+      - "traefik.http.routers.clr_backend_d8_drupal.loadbalancer.server.port=80"
       - "traefik.docker.network=proxy"
     volumes:
       - ../docroot:/app
     networks:
       - proxy
-      - default
     restart: always
 volumes:
   clr_backend_d8_db_data:
