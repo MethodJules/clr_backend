@@ -1,20 +1,19 @@
-uuid: e07f0764-6f05-4b82-926a-ae461faec370
+uuid: fe90d181-4440-4e20-b688-ffe3bf34542d
 langcode: en
 status: true
 dependencies:
   module:
     - basic_auth
-    - hal
     - serialization
     - user
-id: user_registration
-plugin_id: user_registration
+id: entity.user
+plugin_id: 'entity:user'
 granularity: resource
 configuration:
   methods:
+    - GET
     - POST
   formats:
-    - hal_json
     - json
   authentication:
     - basic_auth

@@ -6,4 +6,7 @@ id: student
 label: Student
 weight: 3
 is_admin: null
-permissions: {  }
+permissions:
+  - 'create projekt content'
+  - 'delete own projekt content'
+  - 'edit own projekt content'
