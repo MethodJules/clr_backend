@@ -1,0 +1,5 @@
+name: 'clr'
+type: module
+description: 'Provides specific clr functions'
+core: 8.x
+package: 'CLR'
