@@ -1,19 +1,19 @@
-uuid: fe90d181-4440-4e20-b688-ffe3bf34542d
+uuid: 8135c084-5fd9-452c-86ee-6fe8eb922b3e
 langcode: en
 status: true
 dependencies:
   module:
     - basic_auth
+    - clr
     - hal
     - serialization
     - user
-id: entity.user
-plugin_id: 'entity:user'
+id: clr_resource
+plugin_id: clr_resource
 granularity: resource
 configuration:
   methods:
     - GET
-    - POST
   formats:
     - hal_json
     - json

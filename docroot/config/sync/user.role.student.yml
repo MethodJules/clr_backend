@@ -8,5 +8,6 @@ weight: 3
 is_admin: null
 permissions:
   - 'create projekt content'
+  - 'create to_dos content'
   - 'delete own projekt content'
   - 'edit own projekt content'
