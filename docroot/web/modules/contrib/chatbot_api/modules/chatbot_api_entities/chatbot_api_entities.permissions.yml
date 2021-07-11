@@ -1,4 +1,0 @@
-administer chatbot api entities:
-  title: 'Administer Chatbot API entities'
-  description: 'Configure sending of entity information to remote Chatbot APIs'
-  restrict access: true
