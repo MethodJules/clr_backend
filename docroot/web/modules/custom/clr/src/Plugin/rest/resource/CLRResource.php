@@ -33,10 +33,15 @@ class CLRResource extends ResourceBase {
         ->condition('roles', $role)
         ->execute();
       $users = $userStorage->loadMultiple($uids);
-      $response = [
+
+      $data = [
           "users" => $users,
           ];
-      return new ResourceResponse($response);
+
+      $response = new ResourceResponse($data);
+
+      $response->addCacheableDependency($users);
+      return $response;
 
   }
 }
