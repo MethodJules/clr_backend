@@ -1,0 +1,19 @@
+uuid: 95d3fd81-18e6-4e08-a9f8-630c561d70f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_documentationtext
+    - node.type.phase_vorgehensmodell
+id: node.phase_vorgehensmodell.field_documentationtext
+field_name: field_documentationtext
+entity_type: node
+bundle: phase_vorgehensmodell
+label: documentationText
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

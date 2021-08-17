@@ -1,4 +1,4 @@
-uuid: 051a21af-c3fe-409d-b009-caea92c95f64
+uuid: c6ec75b8-5fb7-4d08-9662-33f269d39428
 langcode: en
 status: true
 dependencies:
@@ -12,17 +12,8 @@ bundle: projekt
 label: 'Externe Mitwirkende'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
-settings:
-  handler: 'default:user'
-  handler_settings:
-    include_anonymous: true
-    filter:
-      type: _none
-    target_bundles: null
-    sort:
-      field: _none
-    auto_create: false
-field_type: entity_reference
+settings: {  }
+field_type: string

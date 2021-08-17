@@ -1,0 +1,19 @@
+uuid: 92e58dee-097b-481d-8c55-a84553ab7aad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_datenbanken
+    - node.type.profil
+id: node.profil.field_datenbanken
+field_name: field_datenbanken
+entity_type: node
+bundle: profil
+label: Datenbanken
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

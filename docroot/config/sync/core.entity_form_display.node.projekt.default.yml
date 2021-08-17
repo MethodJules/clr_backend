@@ -46,14 +46,12 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_externe_mitwirkende:
-    weight: 124
+    weight: 129
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: string_textfield
     region: content
   field_gruppenadministrator:
     weight: 127

@@ -35,12 +35,12 @@ content:
     type: entity_reference_label
     region: content
   field_externe_mitwirkende:
-    weight: 104
+    weight: 109
     label: above
     settings:
-      link: true
+      link_to_entity: false
     third_party_settings: {  }
-    type: entity_reference_label
+    type: string
     region: content
   field_gruppenadministrator:
     weight: 107

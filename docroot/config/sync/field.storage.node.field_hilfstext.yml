@@ -1,4 +1,4 @@
-uuid: 61b37db6-bc74-446f-a636-fb9eec2a66bc
+uuid: d87eb9ce-1412-46a3-b72a-22dd57acf1b8
 langcode: en
 status: true
 dependencies:
@@ -7,14 +7,12 @@ dependencies:
 id: node.field_hilfstext
 field_name: field_hilfstext
 entity_type: node
-type: string
+type: string_long
 settings:
-  max_length: 255
-  is_ascii: false
   case_sensitive: false
 module: core
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

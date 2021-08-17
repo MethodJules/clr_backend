@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.phase_vorgehensmodell.body
     - field.field.node.phase_vorgehensmodell.field_abschluss
     - field.field.node.phase_vorgehensmodell.field_assistent
+    - field.field.node.phase_vorgehensmodell.field_documentationtext
     - field.field.node.phase_vorgehensmodell.field_phase_number
     - field.field.node.phase_vorgehensmodell.field_projektid
     - node.type.phase_vorgehensmodell
@@ -34,5 +35,6 @@ content:
 hidden:
   field_abschluss: true
   field_assistent: true
+  field_documentationtext: true
   field_phase_number: true
   field_projektid: true

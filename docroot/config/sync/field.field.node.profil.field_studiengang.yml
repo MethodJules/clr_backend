@@ -1,0 +1,19 @@
+uuid: 94093a8a-f0dc-454d-adc5-77010f630286
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_studiengang
+    - node.type.profil
+id: node.profil.field_studiengang
+field_name: field_studiengang
+entity_type: node
+bundle: profil
+label: Studiengang
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

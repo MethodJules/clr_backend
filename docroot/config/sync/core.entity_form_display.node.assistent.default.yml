@@ -32,12 +32,12 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_hilfstext:
-    weight: 123
+    weight: 125
     settings:
-      size: 60
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
+    type: string_textarea
     region: content
   field_position:
     weight: 124

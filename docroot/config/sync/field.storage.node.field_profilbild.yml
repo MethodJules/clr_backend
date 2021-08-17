@@ -1,0 +1,30 @@
+uuid: bf9683fa-5aec-4eb0-b5d2-b0c54234b26a
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - node
+id: node.field_profilbild
+field_name: field_profilbild
+entity_type: node
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: fbad1f57-e0e7-4e39-a771-a289c753c1b6
+    alt: ''
+    title: ''
+    width: 820
+    height: 860
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

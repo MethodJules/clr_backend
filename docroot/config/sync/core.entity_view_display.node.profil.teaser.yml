@@ -1,0 +1,44 @@
+uuid: 2d06d02b-8f0f-449c-8002-409658ce40cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.profil.body
+    - field.field.node.profil.field_analysetool
+    - field.field.node.profil.field_anzahl_literaturreviews
+    - field.field.node.profil.field_datenbanken
+    - field.field.node.profil.field_profilbild
+    - field.field.node.profil.field_referenztool
+    - field.field.node.profil.field_studiengang
+    - field.field.node.profil.field_user_uid
+    - node.type.profil
+  module:
+    - text
+    - user
+id: node.profil.teaser
+targetEntityType: node
+bundle: profil
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_analysetool: true
+  field_anzahl_literaturreviews: true
+  field_datenbanken: true
+  field_profilbild: true
+  field_referenztool: true
+  field_studiengang: true
+  field_user_uid: true

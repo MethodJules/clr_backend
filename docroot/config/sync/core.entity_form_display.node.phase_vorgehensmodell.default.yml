@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.phase_vorgehensmodell.body
     - field.field.node.phase_vorgehensmodell.field_abschluss
     - field.field.node.phase_vorgehensmodell.field_assistent
+    - field.field.node.phase_vorgehensmodell.field_documentationtext
     - field.field.node.phase_vorgehensmodell.field_phase_number
     - field.field.node.phase_vorgehensmodell.field_projektid
     - node.type.phase_vorgehensmodell
@@ -49,6 +50,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_documentationtext:
+    weight: 132
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
     region: content
   field_phase_number:
     weight: 131

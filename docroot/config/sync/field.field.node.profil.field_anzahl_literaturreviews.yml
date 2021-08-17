@@ -1,0 +1,23 @@
+uuid: 8eaf7229-a760-49e1-8eee-c55406290d08
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_anzahl_literaturreviews
+    - node.type.profil
+id: node.profil.field_anzahl_literaturreviews
+field_name: field_anzahl_literaturreviews
+entity_type: node
+bundle: profil
+label: 'Anzahl Literaturreviews'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
