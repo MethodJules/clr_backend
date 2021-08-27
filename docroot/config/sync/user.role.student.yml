@@ -21,6 +21,7 @@ permissions:
   - 'create to_dos content'
   - 'create tools content'
   - 'delete own projekt content'
+  - 'edit any projekt content'
   - 'edit own chat content'
   - 'edit own documentation content'
   - 'edit own forum content'
