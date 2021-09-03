@@ -1,0 +1,27 @@
+uuid: edb1f242-6695-420f-a362-ab0f8f5992c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_documentid
+    - node.type.inputdateien
+  module:
+    - file
+id: node.inputdateien.field_documentid
+field_name: field_documentid
+entity_type: node
+bundle: inputdateien
+label: DocumentID
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: txt
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

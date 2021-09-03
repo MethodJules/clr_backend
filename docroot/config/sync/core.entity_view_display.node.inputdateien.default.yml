@@ -4,10 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.node.inputdateien.body
-    - field.field.node.inputdateien.field_bezeichnung
+    - field.field.node.inputdateien.field_docuid
+    - field.field.node.inputdateien.field_documentid
     - field.field.node.inputdateien.field_phasenid
     - node.type.inputdateien
   module:
+    - file
     - text
     - user
 id: node.inputdateien.default
@@ -22,13 +24,22 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_bezeichnung:
-    weight: 102
+  field_docuid:
+    type: entity_reference_entity_view
+    weight: 105
     label: above
     settings:
-      link_to_entity: false
+      view_mode: default
+      link: false
     third_party_settings: {  }
-    type: string
+    region: content
+  field_documentid:
+    weight: 104
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
     region: content
   field_phasenid:
     weight: 103

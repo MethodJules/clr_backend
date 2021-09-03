@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.user.user.field_concept_map_id
+    - field.field.user.user.field_concept_maps
     - field.field.user.user.field_fullname
     - field.field.user.user.field_matrikelnummer
     - field.field.user.user.user_picture
@@ -24,13 +24,15 @@ content:
   contact:
     weight: 5
     region: content
-  field_concept_map_id:
-    weight: 11
+  field_concept_maps:
+    weight: 13
     settings:
+      match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
+    type: entity_reference_autocomplete
     region: content
   field_fullname:
     weight: 7

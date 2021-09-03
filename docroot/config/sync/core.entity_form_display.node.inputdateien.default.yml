@@ -4,10 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.inputdateien.body
-    - field.field.node.inputdateien.field_bezeichnung
+    - field.field.node.inputdateien.field_docuid
+    - field.field.node.inputdateien.field_documentid
     - field.field.node.inputdateien.field_phasenid
     - node.type.inputdateien
   module:
+    - file
+    - media_library
     - path
     - text
 id: node.inputdateien.default
@@ -31,13 +34,19 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_bezeichnung:
-    weight: 122
+  field_docuid:
+    type: media_library_widget
+    weight: 125
     settings:
-      size: 60
-      placeholder: ''
+      media_types: {  }
     third_party_settings: {  }
-    type: string_textfield
+    region: content
+  field_documentid:
+    weight: 124
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
     region: content
   field_phasenid:
     weight: 123
