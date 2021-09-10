@@ -20,6 +20,8 @@ permissions:
   - 'create reflexionstemplate content'
   - 'create to_dos content'
   - 'create tools content'
+  - 'delete any inputdateien content'
+  - 'delete own inputdateien content'
   - 'delete own projekt content'
   - 'edit any projekt content'
   - 'edit own chat content'
