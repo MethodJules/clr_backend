@@ -20,11 +20,11 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.clr_backend_d8_drupal.entrypoints=http"
-      - "traefik.http.routers.clr_backend_d8_drupal.rule=Host(`clr-backend.x-navi.de`)"
+      - "traefik.http.routers.clr_backend_d8_drupal.rule=Host(`clr-backend.ddns.net`,`clr-backend.x-navi.de`)"
       - "traefik.http.middlewares.clr_backend_d8_drupal-https-redirect.redirectscheme.scheme=https"
       - "traefik.http.routers.clr_backend_d8_drupal.middlewares=clr_backend_d8_drupal-https-redirect"
       - "traefik.http.routers.clr_backend_d8_drupal-secure.entrypoints=https"
-      - "traefik.http.routers.clr_backend_d8_drupal-secure.rule=Host(`clr-backend.x-navi.de`)"
+      - "traefik.http.routers.clr_backend_d8_drupal-secure.rule=Host(`clr-backend.ddns.net`,`clr-backend.x-navi.de`)"
       - "traefik.http.routers.clr_backend_d8_drupal-secure.tls=true"
       - "traefik.http.routers.clr_backend_d8_drupal-secure.tls.certresolver=http"
       - "traefik.http.routers.clr_backend_d8_drupal-secure.service=clr_backend_d8_drupal"
