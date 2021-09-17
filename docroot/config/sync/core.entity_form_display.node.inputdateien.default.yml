@@ -4,13 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.inputdateien.body
-    - field.field.node.inputdateien.field_docuid
     - field.field.node.inputdateien.field_documentid
     - field.field.node.inputdateien.field_phasenid
     - node.type.inputdateien
   module:
     - file
-    - media_library
     - path
     - text
 id: node.inputdateien.default
@@ -34,13 +32,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_docuid:
-    type: media_library_widget
-    weight: 125
-    settings:
-      media_types: {  }
-    third_party_settings: {  }
-    region: content
   field_documentid:
     weight: 124
     settings:

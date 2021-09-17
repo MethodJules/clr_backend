@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.inputdateien.body
-    - field.field.node.inputdateien.field_docuid
     - field.field.node.inputdateien.field_documentid
     - field.field.node.inputdateien.field_phasenid
     - node.type.inputdateien
@@ -22,15 +21,6 @@ content:
     type: text_default
     weight: 101
     settings: {  }
-    third_party_settings: {  }
-    region: content
-  field_docuid:
-    type: entity_reference_entity_view
-    weight: 105
-    label: above
-    settings:
-      view_mode: default
-      link: false
     third_party_settings: {  }
     region: content
   field_documentid:
