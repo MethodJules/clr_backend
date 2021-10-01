@@ -14,6 +14,7 @@ permissions:
   - 'access shortcuts'
   - 'access site-wide contact form'
   - 'create media'
+  - 'create profil content'
   - 'create terms in tags'
   - 'delete media'
   - 'edit any profil content'

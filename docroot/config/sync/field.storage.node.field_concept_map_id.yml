@@ -1,19 +1,20 @@
-uuid: 268a9cf3-2f70-4f4d-b48c-1c76805254f6
+uuid: c8011bb0-97af-4f54-bacf-b7f65ba4d23e
 langcode: en
 status: true
 dependencies:
   module:
     - node
-    - user
-id: node.field_betreuender_dozent
-field_name: field_betreuender_dozent
+id: node.field_concept_map_id
+field_name: field_concept_map_id
 entity_type: node
-type: entity_reference
+type: string
 settings:
-  target_type: user
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
 module: core
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

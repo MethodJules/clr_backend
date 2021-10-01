@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.concept.body
+    - field.field.node.concept.field_concept_map_id
     - node.type.concept
   module:
     - text
@@ -27,4 +28,5 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  field_concept_map_id: true
