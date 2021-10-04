@@ -1,0 +1,19 @@
+uuid: 532d59e1-df3c-41ea-a5da-219a9bd5fa23
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_marker
+    - node.type.relationship
+id: node.relationship.field_marker
+field_name: field_marker
+entity_type: node
+bundle: relationship
+label: Marker
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

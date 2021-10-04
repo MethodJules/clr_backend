@@ -1,0 +1,20 @@
+uuid: bc445334-becb-4224-aaa1-d821ce5f9185
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - user
+id: user.field_concept_maps
+field_name: field_concept_maps
+entity_type: user
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

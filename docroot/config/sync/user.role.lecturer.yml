@@ -6,4 +6,5 @@ id: lecturer
 label: Dozent
 weight: 4
 is_admin: null
-permissions: {  }
+permissions:
+  - 'restful get clr_resource'

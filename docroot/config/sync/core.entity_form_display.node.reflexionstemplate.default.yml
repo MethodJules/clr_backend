@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.node.reflexionstemplate.body
     - field.field.node.reflexionstemplate.field_berichten_reagieren
-    - field.field.node.reflexionstemplate.field_group_id
     - field.field.node.reflexionstemplate.field_in_bezug_setzen
     - field.field.node.reflexionstemplate.field_phasenid
     - field.field.node.reflexionstemplate.field_rekonstruieren
@@ -44,14 +43,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
-    region: content
-  field_group_id:
-    weight: 131
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
     region: content
   field_in_bezug_setzen:
     weight: 126

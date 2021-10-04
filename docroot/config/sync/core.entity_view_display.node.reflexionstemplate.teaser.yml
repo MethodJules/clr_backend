@@ -6,7 +6,6 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.reflexionstemplate.body
     - field.field.node.reflexionstemplate.field_berichten_reagieren
-    - field.field.node.reflexionstemplate.field_group_id
     - field.field.node.reflexionstemplate.field_in_bezug_setzen
     - field.field.node.reflexionstemplate.field_phasenid
     - field.field.node.reflexionstemplate.field_rekonstruieren
@@ -37,7 +36,6 @@ content:
     region: content
 hidden:
   field_berichten_reagieren: true
-  field_group_id: true
   field_in_bezug_setzen: true
   field_phasenid: true
   field_rekonstruieren: true

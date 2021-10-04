@@ -1,0 +1,30 @@
+uuid: 76448a55-9374-4d5e-a3e3-f05d267041d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_concept_maps
+    - node.type.concept_map
+  module:
+    - user
+id: user.user.field_concept_maps
+field_name: field_concept_maps
+entity_type: user
+bundle: user
+label: concept_maps
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      concept_map: concept_map
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

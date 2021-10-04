@@ -1,0 +1,23 @@
+uuid: 9560e10c-5fe0-45e7-a426-a3da785bd3e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_user_uid
+    - node.type.profil
+id: node.profil.field_user_uid
+field_name: field_user_uid
+entity_type: node
+bundle: profil
+label: user_uid
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

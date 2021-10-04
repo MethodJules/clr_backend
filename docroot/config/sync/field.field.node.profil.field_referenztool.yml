@@ -1,0 +1,19 @@
+uuid: d7330d74-82af-4487-a320-2a69f8538f06
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_referenztool
+    - node.type.profil
+id: node.profil.field_referenztool
+field_name: field_referenztool
+entity_type: node
+bundle: profil
+label: Referenztool
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

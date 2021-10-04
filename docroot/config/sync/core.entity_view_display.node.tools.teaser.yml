@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.tools.body
     - field.field.node.tools.field_benutzt
     - field.field.node.tools.field_phasenid
+    - field.field.node.tools.field_tool
     - node.type.tools
   module:
     - text
@@ -32,3 +33,4 @@ content:
 hidden:
   field_benutzt: true
   field_phasenid: true
+  field_tool: true

@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.relationship.body
+    - field.field.node.relationship.field_marker
     - field.field.node.relationship.field_sid
     - field.field.node.relationship.field_tid
     - node.type.relationship
@@ -30,5 +31,6 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_marker: true
   field_sid: true
   field_tid: true

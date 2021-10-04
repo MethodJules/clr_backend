@@ -5,7 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.inputdateien.body
-    - field.field.node.inputdateien.field_bezeichnung
+    - field.field.node.inputdateien.field_documentid
     - field.field.node.inputdateien.field_phasenid
     - node.type.inputdateien
   module:
@@ -30,5 +30,5 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
-  field_bezeichnung: true
+  field_documentid: true
   field_phasenid: true

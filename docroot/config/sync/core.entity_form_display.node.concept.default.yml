@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.concept.body
+    - field.field.node.concept.field_concept_map_id
     - node.type.concept
   module:
     - path
@@ -29,6 +30,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_concept_map_id:
+    weight: 122
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   path:
     type: path
     weight: 30

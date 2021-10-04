@@ -1,0 +1,23 @@
+uuid: 5af9f0b3-e51f-4c19-aa51-1dd2902e7882
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.profil
+  module:
+    - text
+id: node.profil.body
+field_name: body
+entity_type: node
+bundle: profil
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

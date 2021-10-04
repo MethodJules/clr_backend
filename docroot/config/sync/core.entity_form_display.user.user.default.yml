@@ -3,9 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_concept_maps
     - field.field.user.user.field_fullname
     - field.field.user.user.field_matrikelnummer
-    - field.field.user.user.field_sparky_id
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -24,6 +24,16 @@ content:
   contact:
     weight: 5
     region: content
+  field_concept_maps:
+    weight: 13
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_fullname:
     weight: 7
     settings:
@@ -38,14 +48,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: number
-    region: content
-  field_sparky_id:
-    weight: 9
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
     region: content
   language:
     weight: 0

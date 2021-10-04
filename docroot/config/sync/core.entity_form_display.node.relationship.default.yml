@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.relationship.body
+    - field.field.node.relationship.field_marker
     - field.field.node.relationship.field_sid
     - field.field.node.relationship.field_tid
     - node.type.relationship
@@ -31,6 +32,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_marker:
+    weight: 124
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_sid:
     weight: 122
     settings:

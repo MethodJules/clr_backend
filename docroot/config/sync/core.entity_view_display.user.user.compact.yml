@@ -4,9 +4,9 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.user.compact
+    - field.field.user.user.field_concept_maps
     - field.field.user.user.field_fullname
     - field.field.user.user.field_matrikelnummer
-    - field.field.user.user.field_sparky_id
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -29,7 +29,7 @@ content:
     third_party_settings: {  }
     label: hidden
 hidden:
+  field_concept_maps: true
   field_fullname: true
   field_matrikelnummer: true
-  field_sparky_id: true
   member_for: true
