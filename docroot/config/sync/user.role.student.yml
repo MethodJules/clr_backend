@@ -25,6 +25,7 @@ permissions:
   - 'delete own inputdateien content'
   - 'delete own outputdateien content'
   - 'delete own projekt content'
+  - 'edit any phase_vorgehensmodell content'
   - 'edit any projekt content'
   - 'edit own chat content'
   - 'edit own documentation content'

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.assistententext.body
+    - field.field.node.assistententext.field_aufgaben
     - field.field.node.assistententext.field_phase
     - node.type.assistententext
   module:
@@ -30,6 +31,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_aufgaben:
+    weight: 123
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_phase:
     weight: 122
     settings:

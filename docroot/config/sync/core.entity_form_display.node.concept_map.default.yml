@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.concept_map.body
     - field.field.node.concept_map.field_conceptmap_concepts
     - field.field.node.concept_map.field_conceptmap_relationships
+    - field.field.node.concept_map.field_conceptmap_tags
     - node.type.concept_map
   module:
     - path
@@ -50,6 +51,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_conceptmap_tags:
+    weight: 124
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   path:
     type: path

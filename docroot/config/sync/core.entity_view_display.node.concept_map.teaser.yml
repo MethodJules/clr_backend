@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.concept_map.body
     - field.field.node.concept_map.field_conceptmap_concepts
     - field.field.node.concept_map.field_conceptmap_relationships
+    - field.field.node.concept_map.field_conceptmap_tags
     - node.type.concept_map
   module:
     - text
@@ -32,3 +33,4 @@ content:
 hidden:
   field_conceptmap_concepts: true
   field_conceptmap_relationships: true
+  field_conceptmap_tags: true

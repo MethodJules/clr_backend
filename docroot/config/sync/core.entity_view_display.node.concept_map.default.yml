@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.concept_map.body
     - field.field.node.concept_map.field_conceptmap_concepts
     - field.field.node.concept_map.field_conceptmap_relationships
+    - field.field.node.concept_map.field_conceptmap_tags
     - node.type.concept_map
   module:
     - text
@@ -37,6 +38,14 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_conceptmap_tags:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   links:
     weight: 100

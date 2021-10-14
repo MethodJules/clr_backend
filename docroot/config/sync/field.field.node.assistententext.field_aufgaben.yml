@@ -1,0 +1,19 @@
+uuid: 1f6330aa-3413-4d25-91a5-fa2285879043
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_aufgaben
+    - node.type.assistententext
+id: node.assistententext.field_aufgaben
+field_name: field_aufgaben
+entity_type: node
+bundle: assistententext
+label: Aufgabe
+description: 'Bitte geben Sie hier die für diese Phase zu erledigende Aufgabe ein.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

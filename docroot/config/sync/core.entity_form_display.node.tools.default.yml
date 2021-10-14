@@ -6,7 +6,6 @@ dependencies:
     - field.field.node.tools.body
     - field.field.node.tools.field_benutzt
     - field.field.node.tools.field_phasenid
-    - field.field.node.tools.field_tool
     - node.type.tools
   module:
     - path
@@ -48,14 +47,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
-    region: content
-  field_tool:
-    weight: 125
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
     region: content
   path:
     type: path

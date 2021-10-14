@@ -1,11 +1,11 @@
-uuid: 10f192aa-3ae8-42f5-910e-063de516c5cc
+uuid: 37493e34-1239-44b5-be2e-486850cd0bab
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_tool
-field_name: field_tool
+id: node.field_conceptmap_tags
+field_name: field_conceptmap_tags
 entity_type: node
 type: string
 settings:
@@ -14,7 +14,7 @@ settings:
   case_sensitive: false
 module: core
 locked: false
-cardinality: 1
+cardinality: -1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false
