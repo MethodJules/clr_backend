@@ -1,0 +1,5 @@
+recommender_log.add_form:
+  route_name: entity.recommender_log.add_form
+  title: 'Add recommender log'
+  appears_on:
+    - entity.recommender_log.collection

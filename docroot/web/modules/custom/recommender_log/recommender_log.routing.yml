@@ -1,0 +1,7 @@
+entity.recommender_log.settings:
+  path: 'admin/structure/recommender-log'
+  defaults:
+    _form: '\Drupal\recommender_log\Form\RecommenderLogSettingsForm'
+    _title: 'Recommender Log'
+  requirements:
+    _permission: 'administer recommender log'

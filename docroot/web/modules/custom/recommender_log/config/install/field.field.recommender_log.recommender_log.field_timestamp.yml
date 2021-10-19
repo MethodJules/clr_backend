@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.recommender_log.field_timestamp
+  module:
+    - recommender_log
+id: recommender_log.recommender_log.field_timestamp
+field_name: field_timestamp
+entity_type: recommender_log
+bundle: recommender_log
+label: timestamp
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1634629203
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

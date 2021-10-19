@@ -1,0 +1,22 @@
+entity.recommender_log.settings:
+  title: Settings
+  route_name: entity.recommender_log.settings
+  base_route: entity.recommender_log.settings
+entity.recommender_log.view:
+  title: View
+  route_name: entity.recommender_log.canonical
+  base_route: entity.recommender_log.canonical
+entity.recommender_log.edit_form:
+  title: Edit
+  route_name: entity.recommender_log.edit_form
+  base_route: entity.recommender_log.canonical
+entity.recommender_log.delete_form:
+  title: Delete
+  route_name: entity.recommender_log.delete_form
+  base_route: entity.recommender_log.canonical
+  weight: 10
+entity.recommender_log.collection:
+  title: Recommender Log
+  route_name: entity.recommender_log.collection
+  base_route: system.admin_content
+  weight: 10

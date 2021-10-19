@@ -12,6 +12,7 @@ module:
   config: 0
   contact: 0
   contextual: 0
+  csv_serialization: 0
   datetime: 0
   dblog: 0
   dynamic_page_cache: 0
@@ -39,7 +40,9 @@ module:
   path_alias: 0
   quickedit: 0
   rdf: 0
+  recommender_log: 0
   rest: 0
+  rest_export_nested: 0
   restui: 0
   search: 0
   serialization: 0
@@ -51,6 +54,7 @@ module:
   tour: 0
   update: 0
   user: 0
+  views_data_export: 0
   views_ui: 0
   views: 10
   standard: 1000

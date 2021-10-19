@@ -1,0 +1,5 @@
+administer recommender log:
+  title: 'Administer recommender log settings'
+  restrict access: true
+access recommender log overview:
+  title: 'Access recommender log overview page'

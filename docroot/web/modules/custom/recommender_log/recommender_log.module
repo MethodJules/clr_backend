@@ -1,0 +1,94 @@
+<?php
+
+/**
+ * @file
+ * Provides a recommender log entity type.
+ */
+
+use Drupal\Core\Render\Element;
+
+/**
+ * Implements hook_theme().
+ */
+function recommender_log_theme() {
+  return [
+    'recommender_log' => [
+      'render element' => 'elements',
+    ],
+  ];
+}
+
+/**
+ * Prepares variables for recommender log templates.
+ *
+ * Default template: recommender-log.html.twig.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - elements: An associative array containing the recommender log information and any
+ *     fields attached to the entity.
+ *   - attributes: HTML attributes for the containing element.
+ */
+function template_preprocess_recommender_log(array &$variables) {
+  foreach (Element::children($variables['elements']) as $key) {
+    $variables['content'][$key] = $variables['elements'][$key];
+  }
+}
+
+
+/**
+ * Implements hook_ENTITY_TYPE_create().
+ */
+function recommender_log_node_create(\Drupal\Core\Entity\EntityInterface $entity) {
+
+}
+
+
+/**
+ * Implements hook_ENTITY_TYPE_insert().
+ */
+function recommender_log_node_insert(Drupal\Core\Entity\EntityInterface $entity) {
+
+  // create recommender log entry on new concepts
+  if ($entity->bundle() === 'concept') {
+    try {
+      $conceptName = $entity->getTitle();
+      $conceptId = $entity->id();
+      $conceptMapUuid = $entity->field_concept_map_id->value;
+      $conceptMap = \Drupal::service('entity.repository')->loadEntityByUuid('node', $conceptMapUuid);
+
+      $logEntry = \Drupal::entityTypeManager()->getStorage('recommender_log')->create();
+      $logEntry->field_event = 'concept_create';
+      $logEntry->field_user_id = $entity->getOwnerId();
+      $logEntry->field_timestamp = $entity->getCreatedTime();
+      $logEntry->field_conceptmap_id = $conceptMap->id();
+      $logEntry->field_conceptmap_name = $conceptMap->getTitle();
+      $logEntry->field_conceptmap_tags = $conceptMap->field_conceptmap_tags;
+
+      // a concept map contains multiple concepts, define their string representation
+      // in the logs. JSON string used.
+
+      // TODO which concepts should be logged? Only concept used in the concept map or those prepared in the sidebar, too?
+      // concepts in the concept map only:
+      //$concepts = $conceptMap->field_conceptmap_concepts->referencedEntities();
+
+      // concepts in the sidebar of concepts maps are logged:
+      $concepts = \Drupal::entityTypeManager()->getStorage('node')->loadByProperties(
+        ['type' => 'concept',
+        'field_concept_map_id' => $conceptMapUuid]);
+
+      $conceptExport = [];
+      foreach ($concepts as $concept) {
+        $conceptExport[] = [
+          'id' => $concept->id(),
+          'name' => $concept->getTitle(),
+          'timestamp' => $concept->getCreatedTime(),
+        ];
+      }
+      $logEntry->field_concepts = \Drupal\Component\Serialization\Json::encode($conceptExport);
+
+      $logEntry->save();
+    } catch (\Drupal\Core\Entity\EntityStorageException $e) {
+    }
+  }
+}

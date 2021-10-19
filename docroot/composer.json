@@ -23,7 +23,11 @@
         "drupal/core-recommended": "^8.8",
         "drupal/devel": "^4.1",
         "drupal/jsonapi_extras": "^3.16",
+        "drupal/rest_export_nested": "^1.0",
         "drupal/restui": "^1.20",
+        "drupal/upgrade_status": "^3.9",
+        "drupal/views_data_export": "^1.0",
+        "drupal/views_field_view": "^1.0@beta",
         "drush/drush": "^10.3",
         "grandt/phpepub": "4.0.7.1"
     },

@@ -1,0 +1,7 @@
+name: Recommender Log
+type: module
+description: 'Provides a recommender log entity.'
+package: clr
+core: 8.x
+core_version_requirement: ^8 || ^9
+configure: entity.recommender_log.settings

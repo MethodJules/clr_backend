@@ -1,0 +1,10 @@
+entity.recommender_log.settings:
+  title: Recommender Log
+  description: Configure a Recommender Log entity type
+  route_name:  entity.recommender_log.settings
+  parent: system.admin_structure
+entity.recommender_log.collection:
+  title: Recommender Logs
+  description: List of recommender logs
+  route_name: entity.recommender_log.collection
+  parent: system.admin_content
