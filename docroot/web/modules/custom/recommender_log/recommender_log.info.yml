@@ -5,3 +5,7 @@ package: clr
 core: 8.x
 core_version_requirement: ^8 || ^9
 configure: entity.recommender_log.settings
+dependencies:
+  - drupal:views_data_export
+  - drupal:csv_serialization
+  - drupal:jsonapi

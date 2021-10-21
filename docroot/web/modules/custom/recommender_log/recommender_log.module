@@ -52,8 +52,8 @@ function recommender_log_node_insert(Drupal\Core\Entity\EntityInterface $entity)
   // create recommender log entry on new concepts
   if ($entity->bundle() === 'concept') {
     try {
-      $conceptName = $entity->getTitle();
-      $conceptId = $entity->id();
+      // $conceptName = $entity->getTitle();
+      // $conceptId = $entity->id();
       $conceptMapUuid = $entity->field_concept_map_id->value;
       $conceptMap = \Drupal::service('entity.repository')->loadEntityByUuid('node', $conceptMapUuid);
 
@@ -64,6 +64,7 @@ function recommender_log_node_insert(Drupal\Core\Entity\EntityInterface $entity)
       $logEntry->field_conceptmap_id = $conceptMap->id();
       $logEntry->field_conceptmap_name = $conceptMap->getTitle();
       $logEntry->field_conceptmap_tags = $conceptMap->field_conceptmap_tags;
+      //$logEntry->field_recommender_concept
 
       // a concept map contains multiple concepts, define their string representation
       // in the logs. JSON string used.

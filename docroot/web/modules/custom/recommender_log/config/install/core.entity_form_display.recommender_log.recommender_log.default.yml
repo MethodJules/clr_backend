@@ -7,6 +7,7 @@ dependencies:
     - field.field.recommender_log.recommender_log.field_conceptmap_tags
     - field.field.recommender_log.recommender_log.field_concepts
     - field.field.recommender_log.recommender_log.field_event
+    - field.field.recommender_log.recommender_log.field_recommender_concept
     - field.field.recommender_log.recommender_log.field_timestamp
     - field.field.recommender_log.recommender_log.field_user_id
   module:
@@ -54,6 +55,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_recommender_concept:
+    weight: 7
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
     region: content
   field_timestamp:
     weight: 5
