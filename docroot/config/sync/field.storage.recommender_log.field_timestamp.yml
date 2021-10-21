@@ -1,0 +1,20 @@
+uuid: 93070737-cf5f-46b5-9e0a-b7e0f4161d20
+langcode: en
+status: true
+dependencies:
+  module:
+    - recommender_log
+_core:
+  default_config_hash: 9xBBuv5m7AF2tWMzfJtYR0KgRF0apyfWtNaRBP6L6WQ
+id: recommender_log.field_timestamp
+field_name: field_timestamp
+entity_type: recommender_log
+type: timestamp
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

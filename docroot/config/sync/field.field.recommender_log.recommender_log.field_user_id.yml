@@ -1,0 +1,26 @@
+uuid: fb57ea69-3607-4602-92e4-f9cb2b4c750d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.recommender_log.field_user_id
+  module:
+    - recommender_log
+_core:
+  default_config_hash: xf9ZHjKzLdRii9RQ2cMsyqd0lkIa5IuWZuJ3N9CikmQ
+id: recommender_log.recommender_log.field_user_id
+field_name: field_user_id
+entity_type: recommender_log
+bundle: recommender_log
+label: user_id
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

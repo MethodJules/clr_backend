@@ -1,0 +1,22 @@
+uuid: 7f1bab47-66b2-49b0-b299-9733ae15a220
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.recommender_log.field_conceptmap_tags
+  module:
+    - recommender_log
+_core:
+  default_config_hash: 1yH9OM3TCYIY5ISAERRsj3CLhahW_0LyWL8RVG6hbjY
+id: recommender_log.recommender_log.field_conceptmap_tags
+field_name: field_conceptmap_tags
+entity_type: recommender_log
+bundle: recommender_log
+label: conceptmap_tags
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

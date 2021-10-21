@@ -22,6 +22,7 @@ permissions:
   - 'create tools content'
   - 'delete any inputdateien content'
   - 'delete any outputdateien content'
+  - 'delete any to_dos content'
   - 'delete own inputdateien content'
   - 'delete own outputdateien content'
   - 'delete own projekt content'

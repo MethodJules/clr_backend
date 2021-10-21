@@ -1,0 +1,24 @@
+uuid: 81d80056-0dd7-45f1-b47c-15943dcd86d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.recommender_log.field_timestamp
+  module:
+    - recommender_log
+_core:
+  default_config_hash: id4nmuUxC2Avr04_Lc-7KVnsKRZG5QICLo7f8Bn3l8A
+id: recommender_log.recommender_log.field_timestamp
+field_name: field_timestamp
+entity_type: recommender_log
+bundle: recommender_log
+label: timestamp
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1634629203
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

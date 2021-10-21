@@ -1,0 +1,26 @@
+uuid: 1357a7ee-6ede-4de0-a9f7-d54ffd572a29
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.recommender_log.field_conceptmap_id
+  module:
+    - recommender_log
+_core:
+  default_config_hash: qYM2SQYUlmpfCQsodwuGdj8dX9cJn6bwg0iJ1Nl07-I
+id: recommender_log.recommender_log.field_conceptmap_id
+field_name: field_conceptmap_id
+entity_type: recommender_log
+bundle: recommender_log
+label: conceptmap_id
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

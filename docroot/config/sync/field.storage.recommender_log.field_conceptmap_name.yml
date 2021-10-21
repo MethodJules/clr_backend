@@ -1,0 +1,21 @@
+uuid: cf382628-092b-49af-8634-96d35b4f0e48
+langcode: en
+status: true
+dependencies:
+  module:
+    - recommender_log
+_core:
+  default_config_hash: WFdht6ATC5tA7O5NMh0vCAX52aZPmXbwnEATXrBs0Qk
+id: recommender_log.field_conceptmap_name
+field_name: field_conceptmap_name
+entity_type: recommender_log
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.to_dos.body
     - field.field.node.to_dos.field_aufgaben
     - field.field.node.to_dos.field_date
+    - field.field.node.to_dos.field_nutzer
     - field.field.node.to_dos.field_projektid
     - node.type.to_dos
   module:
@@ -46,6 +47,16 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
+    region: content
+  field_nutzer:
+    weight: 127
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_projektid:
     weight: 126

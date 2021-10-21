@@ -1,0 +1,23 @@
+uuid: 9a19a1b3-6cb2-47e4-b0c5-4da2b1918dec
+langcode: en
+status: true
+dependencies:
+  module:
+    - recommender_log
+_core:
+  default_config_hash: AUPHN1vVVhVLeu1RlPZZu2mG32A2q5n_e_NJBt9SS1s
+id: recommender_log.field_event
+field_name: field_event
+entity_type: recommender_log
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

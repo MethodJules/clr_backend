@@ -1,0 +1,80 @@
+uuid: cb5b8756-0e9d-4d69-a41a-56ef73bfec49
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.recommender_log.recommender_log.field_conceptmap_id
+    - field.field.recommender_log.recommender_log.field_conceptmap_name
+    - field.field.recommender_log.recommender_log.field_conceptmap_tags
+    - field.field.recommender_log.recommender_log.field_concepts
+    - field.field.recommender_log.recommender_log.field_event
+    - field.field.recommender_log.recommender_log.field_timestamp
+    - field.field.recommender_log.recommender_log.field_user_id
+  module:
+    - recommender_log
+_core:
+  default_config_hash: 07dYiGjp3OrIPd2DI8oqXuH63Ems9uRQ88M5ZdfgvTs
+id: recommender_log.recommender_log.default
+targetEntityType: recommender_log
+bundle: recommender_log
+mode: default
+content:
+  field_conceptmap_id:
+    weight: 0
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_conceptmap_name:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_conceptmap_tags:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_concepts:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_event:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_timestamp:
+    weight: 5
+    label: above
+    settings:
+      date_format: html_datetime
+      custom_date_format: ''
+      timezone: UTC
+    third_party_settings: {  }
+    type: timestamp
+    region: content
+  field_user_id:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden: {  }
