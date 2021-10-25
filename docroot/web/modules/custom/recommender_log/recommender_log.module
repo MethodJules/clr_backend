@@ -92,4 +92,27 @@ function recommender_log_node_insert(Drupal\Core\Entity\EntityInterface $entity)
     } catch (\Drupal\Core\Entity\EntityStorageException $e) {
     }
   }
+
+  // create relationship log entry on new relations
+  if ($entity->bundle() === 'relationship') {
+    try {
+      // convert stored UUID strings to IDs
+      $conceptSource = \Drupal::service('entity.repository')->loadEntityByUuid('node',$entity->field_sid->value);
+      $conceptTarget = \Drupal::service('entity.repository')->loadEntityByUuid('node',$entity->field_tid->value);
+      $conceptMap = \Drupal::service('entity.repository')->loadEntityByUuid('node', $conceptSource->field_concept_map_id->value);
+
+      $values = [];
+      $values['type'] = 'relationshiplog';
+      $values['title'] = $entity->getTitle() . ' log';
+      $values['field_event'] = 'relationship_create';
+      $values['field_direction'] = "links";
+      $values['field_timestamp'] = $entity->getCreatedTime();
+      $values['field_concept_source_id'] = $conceptSource->id();
+      $values['field_concept_target_id'] = $conceptTarget->id();
+      $values['field_conceptmap_id'] = $conceptMap->id();
+      $logEntry = \Drupal::entityTypeManager()->getStorage('node')->create($values);
+      $logEntry->save();
+    } catch (\Drupal\Core\Entity\EntityStorageException $e) {
+    }
+  }
 }
