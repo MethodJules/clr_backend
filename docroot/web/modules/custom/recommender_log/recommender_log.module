@@ -101,11 +101,27 @@ function recommender_log_node_insert(Drupal\Core\Entity\EntityInterface $entity)
       $conceptTarget = \Drupal::service('entity.repository')->loadEntityByUuid('node',$entity->field_tid->value);
       $conceptMap = \Drupal::service('entity.repository')->loadEntityByUuid('node', $conceptSource->field_concept_map_id->value);
 
+      // convert relationship direction
+      $relationshipDirection = '';
+      if ($entity->field_marker_start->value === 'm-start') {
+        if ($entity->field_marker_end->value === 'm-end') {
+          $relationshipDirection = 'bidirectional';
+        } elseif ($entity->field_marker_end->value === null) {
+          $relationshipDirection = 'target-to-source';
+        }
+      } elseif ($entity->field_marker_start->value === null) {
+        if ($entity->field_marker_end->value === 'm-end') {
+          $relationshipDirection = 'source-to-target';
+        }
+      } else {
+        $relationshipDirection = 'undefined';
+      }
+
       $values = [];
       $values['type'] = 'relationshiplog';
       $values['title'] = $entity->getTitle();
       $values['field_event'] = 'relationship_create';
-      $values['field_direction'] = $entity->field_marker->value;
+      $values['field_direction'] = $relationshipDirection;
       $values['field_timestamp'] = $entity->getCreatedTime();
       $values['field_concept_source_id'] = $conceptSource->id();
       $values['field_concept_target_id'] = $conceptTarget->id();
