@@ -1,0 +1,21 @@
+uuid: 3ab676d0-06e5-4364-adb7-9f60efff4354
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_timestamp
+    - node.type.relationshiplog
+id: node.relationshiplog.field_timestamp
+field_name: field_timestamp
+entity_type: node
+bundle: relationshiplog
+label: Timestamp
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1635170608
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

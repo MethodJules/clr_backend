@@ -1,0 +1,21 @@
+uuid: c0afaa26-4df1-4fc6-8e6c-768c2a04ad73
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_components
+    - node.type.assistententext
+  module:
+    - options
+id: node.assistententext.field_components
+field_name: field_components
+entity_type: node
+bundle: assistententext
+label: Komponenten
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

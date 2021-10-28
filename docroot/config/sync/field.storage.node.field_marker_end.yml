@@ -1,14 +1,12 @@
-uuid: cb3fc0d3-f034-454f-93ad-96027a17b351
+uuid: d2c3371f-d049-4632-abe8-1ba54d6321aa
 langcode: en
 status: true
 dependencies:
   module:
-    - recommender_log
-_core:
-  default_config_hash: AUPHN1vVVhVLeu1RlPZZu2mG32A2q5n_e_NJBt9SS1s
-id: recommender_log.field_event
-field_name: field_event
-entity_type: recommender_log
+    - node
+id: node.field_marker_end
+field_name: field_marker_end
+entity_type: node
 type: string
 settings:
   max_length: 255

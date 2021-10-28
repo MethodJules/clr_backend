@@ -1,14 +1,12 @@
-uuid: eb2567ca-cea3-48b2-b316-243e9b95786b
+uuid: 5684e5c3-a2b5-4a77-afbd-535839d0d6ac
 langcode: en
 status: true
 dependencies:
   module:
-    - recommender_log
-_core:
-  default_config_hash: ypILsB7yS90uiinm1Rmu0fu9L2xBrvP_rNJeLsDi8Fg
-id: recommender_log.field_user_id
-field_name: field_user_id
-entity_type: recommender_log
+    - node
+id: node.field_concept_source_id
+field_name: field_concept_source_id
+entity_type: node
 type: integer
 settings:
   unsigned: false

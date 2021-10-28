@@ -1,15 +1,15 @@
-uuid: 532d59e1-df3c-41ea-a5da-219a9bd5fa23
+uuid: b78544ce-b10c-45d4-b0bc-b7997b404546
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_marker
+    - field.storage.node.field_marker_start
     - node.type.relationship
-id: node.relationship.field_marker
-field_name: field_marker
+id: node.relationship.field_marker_start
+field_name: field_marker_start
 entity_type: node
 bundle: relationship
-label: Marker
+label: marker-start
 description: ''
 required: false
 translatable: false

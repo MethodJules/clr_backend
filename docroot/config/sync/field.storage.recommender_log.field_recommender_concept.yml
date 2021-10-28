@@ -1,22 +1,20 @@
-uuid: cb3fc0d3-f034-454f-93ad-96027a17b351
+uuid: 93e2c9b2-92d6-477f-ad3f-d0c9c385c356
 langcode: en
 status: true
 dependencies:
   module:
     - recommender_log
 _core:
-  default_config_hash: AUPHN1vVVhVLeu1RlPZZu2mG32A2q5n_e_NJBt9SS1s
-id: recommender_log.field_event
-field_name: field_event
+  default_config_hash: ifgBs__D-WIy99vDnVWTt1JafMRzPTvlsQceRTk_YUo
+id: recommender_log.field_recommender_concept
+field_name: field_recommender_concept
 entity_type: recommender_log
-type: string
+type: string_long
 settings:
-  max_length: 255
-  is_ascii: false
   case_sensitive: false
 module: core
 locked: false
-cardinality: 1
+cardinality: -1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

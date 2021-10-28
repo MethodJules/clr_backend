@@ -1,30 +1,28 @@
-uuid: 68c32b3f-9b3b-4486-9b91-fbdcfb76ec06
+uuid: 3feb69ee-0088-4bfc-b62a-c67b5360764e
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.recommender_log.field_conceptmap_id
-    - field.storage.recommender_log.field_conceptmap_name
-    - field.storage.recommender_log.field_conceptmap_tags
-    - field.storage.recommender_log.field_concepts
-    - field.storage.recommender_log.field_event
-    - field.storage.recommender_log.field_recommender_concept
-    - field.storage.recommender_log.field_timestamp
-    - field.storage.recommender_log.field_user_id
+    - field.storage.node.field_concept_source_id
+    - field.storage.node.field_concept_target_id
+    - field.storage.node.field_conceptmap_id
+    - field.storage.node.field_direction
+    - field.storage.node.field_event
+    - field.storage.node.field_timestamp
+    - node.type.relationshiplog
   module:
-    - recommender_log
+    - node
     - rest
     - rest_export_nested
     - serialization
-_core:
-  default_config_hash: qoZRuYtt-ykFBVDOGKsBFmcfVXJV5sAij0ET75QlsvI
-id: recommender_log
-label: 'Export Recommender Log'
+    - user
+id: concept_map_relationship_log
+label: 'Export Concept Map Relationship Log'
 module: views
-description: 'Concept map recommender log messages'
+description: "Concept map relationships log messages\t"
 tag: ''
-base_table: recommender_log
-base_field: id
+base_table: node_field_data
+base_field: nid
 display:
   default:
     display_plugin: default
@@ -33,8 +31,9 @@ display:
     position: 0
     display_options:
       access:
-        type: none
-        options: {  }
+        type: perm
+        options:
+          perm: 'access content'
       cache:
         type: tag
         options: {  }
@@ -75,7 +74,12 @@ display:
             previous: ‹‹
             next: ››
       style:
-        type: serializer
+        type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
       row:
         type: fields
         options:
@@ -84,75 +88,9 @@ display:
           hide_empty: false
           default_field_elements: true
       fields:
-        id:
-          id: id
-          table: recommender_log
-          field: id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: number_integer
-          settings:
-            thousand_separator: ''
-            prefix_suffix: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          entity_type: null
-          entity_field: id
-          plugin_id: field
         field_timestamp:
           id: field_timestamp
-          table: recommender_log__field_timestamp
+          table: node__field_timestamp
           field: field_timestamp
           relationship: none
           group_type: group
@@ -217,7 +155,7 @@ display:
           plugin_id: field
         field_event:
           id: field_event
-          table: recommender_log__field_event
+          table: node__field_event
           field: field_event
           relationship: none
           group_type: group
@@ -278,73 +216,9 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_user_id:
-          id: field_user_id
-          table: recommender_log__field_user_id
-          field: field_user_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: false
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: number_integer
-          settings:
-            thousand_separator: ''
-            prefix_suffix: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
         field_conceptmap_id:
           id: field_conceptmap_id
-          table: recommender_log__field_conceptmap_id
+          table: node__field_conceptmap_id
           field: field_conceptmap_id
           relationship: none
           group_type: group
@@ -406,10 +280,10 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_conceptmap_name:
-          id: field_conceptmap_name
-          table: recommender_log__field_conceptmap_name
-          field: field_conceptmap_name
+        title:
+          id: title
+          table: node_field_data
+          field: title
           relationship: none
           group_type: group
           admin_label: ''
@@ -433,70 +307,8 @@ display:
             target: ''
             nl2br: false
             max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: false
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: basic_string
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_conceptmap_tags:
-          id: field_conceptmap_tags
-          table: recommender_log__field_conceptmap_tags
-          field: field_conceptmap_tags
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
+            word_boundary: false
+            ellipsis: false
             more_link: false
             more_link_text: ''
             more_link_path: ''
@@ -528,13 +340,15 @@ display:
           delta_reversed: false
           delta_first_last: false
           multi_type: separator
-          separator: ','
+          separator: ', '
           field_api_classes: false
+          entity_type: node
+          entity_field: title
           plugin_id: field
-        field_concepts:
-          id: field_concepts
-          table: recommender_log__field_concepts
-          field: field_concepts
+        field_concept_source_id:
+          id: field_concept_source_id
+          table: node__field_concept_source_id
+          field: field_concept_source_id
           relationship: none
           group_type: group
           admin_label: ''
@@ -580,8 +394,10 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: basic_string
-          settings: {  }
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -593,10 +409,10 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_recommender_concept:
-          id: field_recommender_concept
-          table: recommender_log__field_recommender_concept
-          field: field_recommender_concept
+        field_concept_target_id:
+          id: field_concept_target_id
+          table: node__field_concept_target_id
+          field: field_concept_target_id
           relationship: none
           group_type: group
           admin_label: ''
@@ -636,14 +452,16 @@ display:
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: basic_string
-          settings: {  }
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -655,22 +473,83 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-      filters: {  }
-      sorts:
-        id:
-          id: id
-          table: recommender_log
-          field: id
+        field_direction:
+          id: field_direction
+          table: node__field_direction
+          field: field_direction
           relationship: none
           group_type: group
           admin_label: ''
-          order: ASC
-          exposed: false
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+      filters:
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            relationshiplog: relationshiplog
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
           expose:
-            label: ''
-          entity_type: recommender_log
-          entity_field: id
-          plugin_id: standard
+            operator_limit_selection: false
+            operator_list: {  }
+      sorts: {  }
       header: {  }
       footer: {  }
       empty: {  }
@@ -682,77 +561,70 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - request_format
         - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
       tags:
-        - 'config:field.storage.recommender_log.field_conceptmap_id'
-        - 'config:field.storage.recommender_log.field_conceptmap_name'
-        - 'config:field.storage.recommender_log.field_conceptmap_tags'
-        - 'config:field.storage.recommender_log.field_concepts'
-        - 'config:field.storage.recommender_log.field_event'
-        - 'config:field.storage.recommender_log.field_recommender_concept'
-        - 'config:field.storage.recommender_log.field_timestamp'
-        - 'config:field.storage.recommender_log.field_user_id'
+        - 'config:field.storage.node.field_concept_source_id'
+        - 'config:field.storage.node.field_concept_target_id'
+        - 'config:field.storage.node.field_conceptmap_id'
+        - 'config:field.storage.node.field_direction'
+        - 'config:field.storage.node.field_event'
+        - 'config:field.storage.node.field_timestamp'
   rest_export_nested_1:
     display_plugin: rest_export_nested
     id: rest_export_nested_1
     display_title: 'REST export nested'
-    position: 2
+    position: 1
     display_options:
       display_extenders: {  }
-      path: export/recommender
       row:
         type: data_field
         options:
           field_options:
-            id:
-              alias: ''
-              raw_output: false
             field_timestamp:
               alias: timestamp
               raw_output: false
             field_event:
               alias: event
               raw_output: false
-            field_user_id:
-              alias: user_id
-              raw_output: false
             field_conceptmap_id:
               alias: conceptmap_id
               raw_output: false
-            field_conceptmap_name:
-              alias: conceptmap_name
+            title:
+              alias: label
               raw_output: false
-            field_conceptmap_tags:
-              alias: conceptmap_tags
-              raw_output: true
-            field_concepts:
-              alias: concepts
+            field_concept_source_id:
+              alias: concept_source_id
               raw_output: false
-            field_recommender_concept:
-              alias: recommender_concept
+            field_concept_target_id:
+              alias: concept_target_id
               raw_output: false
-      pager:
-        type: none
-        options:
-          offset: 0
+            field_direction:
+              alias: direction
+              raw_output: false
+      path: export/concept-map-relationships
       style:
         type: serializer
         options:
           formats:
             json: json
+      pager:
+        type: none
+        options:
+          offset: 0
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - request_format
+        - 'user.node_grants:view'
+        - user.permissions
       tags:
-        - 'config:field.storage.recommender_log.field_conceptmap_id'
-        - 'config:field.storage.recommender_log.field_conceptmap_name'
-        - 'config:field.storage.recommender_log.field_conceptmap_tags'
-        - 'config:field.storage.recommender_log.field_concepts'
-        - 'config:field.storage.recommender_log.field_event'
-        - 'config:field.storage.recommender_log.field_recommender_concept'
-        - 'config:field.storage.recommender_log.field_timestamp'
-        - 'config:field.storage.recommender_log.field_user_id'
+        - 'config:field.storage.node.field_concept_source_id'
+        - 'config:field.storage.node.field_concept_target_id'
+        - 'config:field.storage.node.field_conceptmap_id'
+        - 'config:field.storage.node.field_direction'
+        - 'config:field.storage.node.field_event'
+        - 'config:field.storage.node.field_timestamp'

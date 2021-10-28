@@ -1,0 +1,32 @@
+uuid: c3706798-f782-44d6-b849-73dca6e65157
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.relationshiplog.field_concept_source_id
+    - field.field.node.relationshiplog.field_concept_target_id
+    - field.field.node.relationshiplog.field_conceptmap_id
+    - field.field.node.relationshiplog.field_direction
+    - field.field.node.relationshiplog.field_event
+    - field.field.node.relationshiplog.field_timestamp
+    - node.type.relationshiplog
+  module:
+    - user
+id: node.relationshiplog.teaser
+targetEntityType: node
+bundle: relationshiplog
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_concept_source_id: true
+  field_concept_target_id: true
+  field_conceptmap_id: true
+  field_direction: true
+  field_event: true
+  field_timestamp: true

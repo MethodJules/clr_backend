@@ -1,0 +1,23 @@
+uuid: 9e6f5eaf-b899-4778-bb60-eb3c4c385e86
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_showemail
+    - node.type.profil
+id: node.profil.field_showemail
+field_name: field_showemail
+entity_type: node
+bundle: profil
+label: showEmail
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

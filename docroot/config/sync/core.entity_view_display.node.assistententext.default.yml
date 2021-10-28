@@ -5,9 +5,11 @@ dependencies:
   config:
     - field.field.node.assistententext.body
     - field.field.node.assistententext.field_aufgaben
+    - field.field.node.assistententext.field_components
     - field.field.node.assistententext.field_phase
     - node.type.assistententext
   module:
+    - options
     - text
     - user
 id: node.assistententext.default
@@ -29,6 +31,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_components:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_phase:
     weight: 102

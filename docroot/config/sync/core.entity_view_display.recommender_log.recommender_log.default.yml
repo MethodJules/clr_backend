@@ -1,4 +1,4 @@
-uuid: cb5b8756-0e9d-4d69-a41a-56ef73bfec49
+uuid: 08b7f1e5-4839-4e7d-af8e-14c23b880a25
 langcode: en
 status: true
 dependencies:
@@ -8,12 +8,13 @@ dependencies:
     - field.field.recommender_log.recommender_log.field_conceptmap_tags
     - field.field.recommender_log.recommender_log.field_concepts
     - field.field.recommender_log.recommender_log.field_event
+    - field.field.recommender_log.recommender_log.field_recommender_concept
     - field.field.recommender_log.recommender_log.field_timestamp
     - field.field.recommender_log.recommender_log.field_user_id
   module:
     - recommender_log
 _core:
-  default_config_hash: 07dYiGjp3OrIPd2DI8oqXuH63Ems9uRQ88M5ZdfgvTs
+  default_config_hash: Yup0_kJuilPuYlDIxsgjnso_5Zz9j7MK9zOgkxh7auQ
 id: recommender_log.recommender_log.default
 targetEntityType: recommender_log
 bundle: recommender_log
@@ -57,6 +58,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_recommender_concept:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
     region: content
   field_timestamp:
     weight: 5

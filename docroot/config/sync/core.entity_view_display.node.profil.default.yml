@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.profil.field_datenbanken
     - field.field.node.profil.field_profilbild
     - field.field.node.profil.field_referenztool
+    - field.field.node.profil.field_showemail
     - field.field.node.profil.field_studiengang
     - field.field.node.profil.field_user_uid
     - node.type.profil
@@ -69,6 +70,16 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_showemail:
+    weight: 112
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_studiengang:
     weight: 102

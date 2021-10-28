@@ -1,0 +1,19 @@
+uuid: 71300f24-6bf9-4f26-959d-6708bfb19b7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_direction
+    - node.type.relationshiplog
+id: node.relationshiplog.field_direction
+field_name: field_direction
+entity_type: node
+bundle: relationshiplog
+label: direction
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,19 @@
+uuid: 6116ca29-d2d7-4414-8d97-3d590daf7f0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event
+    - node.type.relationshiplog
+id: node.relationshiplog.field_event
+field_name: field_event
+entity_type: node
+bundle: relationshiplog
+label: event
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

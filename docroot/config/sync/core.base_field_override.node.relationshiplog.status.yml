@@ -1,0 +1,22 @@
+uuid: cec24a9f-8c6c-49f7-be95-a0316665b0cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.relationshiplog
+id: node.relationshiplog.status
+field_name: status
+entity_type: node
+bundle: relationshiplog
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

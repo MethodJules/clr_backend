@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.profil.field_datenbanken
     - field.field.node.profil.field_profilbild
     - field.field.node.profil.field_referenztool
+    - field.field.node.profil.field_showemail
     - field.field.node.profil.field_studiengang
     - field.field.node.profil.field_user_uid
     - node.type.profil
@@ -40,5 +41,6 @@ hidden:
   field_datenbanken: true
   field_profilbild: true
   field_referenztool: true
+  field_showemail: true
   field_studiengang: true
   field_user_uid: true

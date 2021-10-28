@@ -4,7 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.node.relationship.body
-    - field.field.node.relationship.field_marker
+    - field.field.node.relationship.field_marker_end
+    - field.field.node.relationship.field_marker_start
     - field.field.node.relationship.field_sid
     - field.field.node.relationship.field_tid
     - node.type.relationship
@@ -23,8 +24,16 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_marker:
-    weight: 104
+  field_marker_end:
+    weight: 106
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_marker_start:
+    weight: 105
     label: above
     settings:
       link_to_entity: false

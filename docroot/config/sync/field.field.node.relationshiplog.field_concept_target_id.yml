@@ -1,0 +1,23 @@
+uuid: 759a0251-e2f0-4bc7-93b9-a3095331f8ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_concept_target_id
+    - node.type.relationshiplog
+id: node.relationshiplog.field_concept_target_id
+field_name: field_concept_target_id
+entity_type: node
+bundle: relationshiplog
+label: concept_target_id
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

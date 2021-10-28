@@ -1,0 +1,23 @@
+uuid: e7561de3-6427-40dd-ba6a-76c336284a56
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_conceptmap_id
+    - node.type.relationshiplog
+id: node.relationshiplog.field_conceptmap_id
+field_name: field_conceptmap_id
+entity_type: node
+bundle: relationshiplog
+label: conceptmap_id
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

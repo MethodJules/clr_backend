@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.assistententext.body
     - field.field.node.assistententext.field_aufgaben
+    - field.field.node.assistententext.field_components
     - field.field.node.assistententext.field_phase
     - node.type.assistententext
   module:
@@ -38,6 +39,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_components:
+    weight: 124
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_phase:
     weight: 122

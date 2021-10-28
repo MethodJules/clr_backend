@@ -1,17 +1,16 @@
-uuid: 05d16d01-919d-4a06-8033-49133927c7c3
+uuid: 32e9ad49-d541-4132-abcb-a674b7acdb00
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_marker
-field_name: field_marker
+id: node.field_conceptmap_id
+field_name: field_conceptmap_id
 entity_type: node
-type: string
+type: integer
 settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
+  unsigned: false
+  size: normal
 module: core
 locked: false
 cardinality: 1

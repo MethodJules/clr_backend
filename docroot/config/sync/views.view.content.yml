@@ -457,14 +457,14 @@ display:
             description: ''
             use_operator: false
             operator: status_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: status
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: true
           group_info:
             label: 'Published status'
@@ -473,7 +473,7 @@ display:
             optional: true
             widget: select
             multiple: false
-            remember: false
+            remember: true
             default_group: All
             default_group_multiple: {  }
             group_items:

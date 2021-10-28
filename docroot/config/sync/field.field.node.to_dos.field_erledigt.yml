@@ -1,0 +1,23 @@
+uuid: 51840dfc-986a-4152-bb00-8fe6576de014
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_erledigt
+    - node.type.to_dos
+id: node.to_dos.field_erledigt
+field_name: field_erledigt
+entity_type: node
+bundle: to_dos
+label: erledigt
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

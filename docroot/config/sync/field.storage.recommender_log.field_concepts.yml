@@ -1,18 +1,17 @@
-uuid: eb2567ca-cea3-48b2-b316-243e9b95786b
+uuid: 4bd864f1-2927-464f-87c3-0aef011f4318
 langcode: en
 status: true
 dependencies:
   module:
     - recommender_log
 _core:
-  default_config_hash: ypILsB7yS90uiinm1Rmu0fu9L2xBrvP_rNJeLsDi8Fg
-id: recommender_log.field_user_id
-field_name: field_user_id
+  default_config_hash: yHTX4OzN-3I9er1yAxXSmNoaBwei-ucY7oZW9pQHE-c
+id: recommender_log.field_concepts
+field_name: field_concepts
 entity_type: recommender_log
-type: integer
+type: string_long
 settings:
-  unsigned: false
-  size: normal
+  case_sensitive: false
 module: core
 locked: false
 cardinality: 1

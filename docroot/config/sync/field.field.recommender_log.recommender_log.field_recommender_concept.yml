@@ -1,0 +1,22 @@
+uuid: 247cd814-e669-4b2d-ad22-9d86ded4cf50
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.recommender_log.field_recommender_concept
+  module:
+    - recommender_log
+_core:
+  default_config_hash: aCvVlz7FERXtwqdvXtHH_Q4wHiGQuVPdYabTBIm8t5s
+id: recommender_log.recommender_log.field_recommender_concept
+field_name: field_recommender_concept
+entity_type: recommender_log
+bundle: recommender_log
+label: recommender_concept
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

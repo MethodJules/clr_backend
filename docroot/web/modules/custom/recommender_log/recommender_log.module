@@ -103,9 +103,9 @@ function recommender_log_node_insert(Drupal\Core\Entity\EntityInterface $entity)
 
       $values = [];
       $values['type'] = 'relationshiplog';
-      $values['title'] = $entity->getTitle() . ' log';
+      $values['title'] = $entity->getTitle();
       $values['field_event'] = 'relationship_create';
-      $values['field_direction'] = "links";
+      $values['field_direction'] = $entity->field_marker->value;
       $values['field_timestamp'] = $entity->getCreatedTime();
       $values['field_concept_source_id'] = $conceptSource->id();
       $values['field_concept_target_id'] = $conceptTarget->id();

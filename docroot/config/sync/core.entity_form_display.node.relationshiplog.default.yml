@@ -1,47 +1,58 @@
-uuid: 1cd8e426-8980-480b-b395-c015c1cb2103
+uuid: 9a7f2f48-46ee-4e56-85f8-968213c6ad9e
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.relationship.body
-    - field.field.node.relationship.field_marker_end
-    - field.field.node.relationship.field_marker_start
-    - field.field.node.relationship.field_sid
-    - field.field.node.relationship.field_tid
-    - node.type.relationship
+    - field.field.node.relationshiplog.field_concept_source_id
+    - field.field.node.relationshiplog.field_concept_target_id
+    - field.field.node.relationshiplog.field_conceptmap_id
+    - field.field.node.relationshiplog.field_direction
+    - field.field.node.relationshiplog.field_event
+    - field.field.node.relationshiplog.field_timestamp
+    - node.type.relationshiplog
   module:
     - path
-    - text
-id: node.relationship.default
+id: node.relationshiplog.default
 targetEntityType: node
-bundle: relationship
+bundle: relationshiplog
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 121
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-      show_summary: false
-    third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
     weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_marker_end:
-    weight: 126
+  field_concept_source_id:
+    weight: 122
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_concept_target_id:
+    weight: 123
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_conceptmap_id:
+    weight: 121
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_direction:
+    weight: 124
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_marker_start:
+  field_event:
     weight: 125
     settings:
       size: 60
@@ -49,21 +60,11 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_sid:
-    weight: 122
-    settings:
-      size: 60
-      placeholder: ''
+  field_timestamp:
+    weight: 126
+    settings: {  }
     third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_tid:
-    weight: 123
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
+    type: datetime_timestamp
     region: content
   path:
     type: path
