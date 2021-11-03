@@ -1,0 +1,6 @@
+services:
+  clr.login_response_listener:
+    class: '\Drupal\clr\Listener\CLRListener'
+    arguments: ['@path.current']
+    tags:
+      - { name: event_subscriber }
