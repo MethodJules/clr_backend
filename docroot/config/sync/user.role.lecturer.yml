@@ -7,4 +7,5 @@ label: Dozent
 weight: 4
 is_admin: null
 permissions:
+  - 'edit any projekt content'
   - 'restful get clr_resource'
