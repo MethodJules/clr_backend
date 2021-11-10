@@ -73,6 +73,39 @@ class CLRListener implements EventSubscriberInterface
     }
   }
 
+  public function onHttpRegistrationResponse(FilterResponseEvent $event) {
+    // Halt if not user register request
+    if ($this->currentPath->getPath() !== '/user/register') {
+      return;
+    }
+
+    // Get response
+    $response = $event->getResponse();
+    // Ensure not error response
+    if ($response->getStatusCode() !== 200) {
+      return;
+    }
+    // Get request
+    $request = $event->getRequest();
+    // Just handle JSON format for now
+    if ($request->query->get('_format') !== 'json') {
+      return;
+    }
+    // Decode and add data
+    if ($content = $response->getContent()) {
+      if ($decoded = Json::decode($content)) {
+        // Add JWT access_token
+        $data = [
+          'uuid' => $this->getUUID(),
+          ];
+        $decoded['access_token'] = $data;
+        // Set new response JSON
+        $response->setContent(Json::encode($decoded));
+        $event->setResponse($response);
+      }
+    }
+  }
+
   public function getUserRole() {
     $current_user = \Drupal::currentUser();
     $roles = $current_user->getRoles();
