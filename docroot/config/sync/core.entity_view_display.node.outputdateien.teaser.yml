@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.outputdateien.body
-    - field.field.node.outputdateien.field_bezeichnung
     - field.field.node.outputdateien.field_output_datei
     - field.field.node.outputdateien.field_phasenid
     - node.type.outputdateien
@@ -31,6 +30,5 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
-  field_bezeichnung: true
   field_output_datei: true
   field_phasenid: true

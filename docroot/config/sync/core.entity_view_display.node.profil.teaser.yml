@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.profil.field_analysetool
     - field.field.node.profil.field_anzahl_literaturreviews
     - field.field.node.profil.field_datenbanken
+    - field.field.node.profil.field_nutzer
     - field.field.node.profil.field_profilbild
     - field.field.node.profil.field_referenztool
     - field.field.node.profil.field_showemail
@@ -39,6 +40,7 @@ hidden:
   field_analysetool: true
   field_anzahl_literaturreviews: true
   field_datenbanken: true
+  field_nutzer: true
   field_profilbild: true
   field_referenztool: true
   field_showemail: true

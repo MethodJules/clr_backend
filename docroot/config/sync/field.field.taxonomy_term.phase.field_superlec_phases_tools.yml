@@ -1,0 +1,28 @@
+uuid: fd585519-3c3b-43e2-801d-bca91f4b6bc3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_superlec_phases_tools
+    - node.type.tools
+    - taxonomy.vocabulary.phase
+id: taxonomy_term.phase.field_superlec_phases_tools
+field_name: field_superlec_phases_tools
+entity_type: taxonomy_term
+bundle: phase
+label: Tools
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      tools: tools
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

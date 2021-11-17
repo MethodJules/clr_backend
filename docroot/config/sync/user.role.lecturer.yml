@@ -7,5 +7,7 @@ label: Dozent
 weight: 4
 is_admin: null
 permissions:
+  - 'access user profiles'
   - 'edit any projekt content'
+  - 'edit own profil content'
   - 'restful get clr_resource'

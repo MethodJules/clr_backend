@@ -1,0 +1,28 @@
+uuid: feb984e5-2fa2-4738-bfe1-95f599b6271c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nutzer
+    - node.type.profil
+id: node.profil.field_nutzer
+field_name: field_nutzer
+entity_type: node
+bundle: profil
+label: User
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

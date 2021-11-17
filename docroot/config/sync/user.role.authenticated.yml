@@ -17,7 +17,6 @@ permissions:
   - 'create profil content'
   - 'create terms in tags'
   - 'delete media'
-  - 'edit any profil content'
   - 'post comments'
   - 'search content'
   - 'skip comment approval'

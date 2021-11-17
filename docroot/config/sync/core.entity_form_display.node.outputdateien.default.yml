@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.outputdateien.body
-    - field.field.node.outputdateien.field_bezeichnung
     - field.field.node.outputdateien.field_output_datei
     - field.field.node.outputdateien.field_phasenid
     - node.type.outputdateien
@@ -33,14 +32,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_bezeichnung:
-    weight: 123
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_output_datei:
     weight: 122
     settings:

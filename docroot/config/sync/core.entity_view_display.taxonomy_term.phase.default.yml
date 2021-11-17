@@ -1,0 +1,30 @@
+uuid: 6f354d6a-68d8-4bce-b202-5badd611a5a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.phase.field_superlec_phases_tools
+    - taxonomy.vocabulary.phase
+  module:
+    - text
+id: taxonomy_term.phase.default
+targetEntityType: taxonomy_term
+bundle: phase
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_superlec_phases_tools:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

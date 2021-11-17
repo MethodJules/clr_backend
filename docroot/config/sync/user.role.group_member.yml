@@ -1,9 +1,0 @@
-uuid: 80409793-eb64-4236-ae74-3c5486f1f88c
-langcode: en
-status: true
-dependencies: {  }
-id: group_member
-label: Gruppenmitglied
-weight: 5
-is_admin: null
-permissions: {  }
