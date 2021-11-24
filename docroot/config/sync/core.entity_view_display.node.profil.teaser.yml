@@ -5,14 +5,17 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.profil.body
+    - field.field.node.profil.field_abteilung
     - field.field.node.profil.field_analysetool
     - field.field.node.profil.field_anzahl_literaturreviews
     - field.field.node.profil.field_datenbanken
     - field.field.node.profil.field_nutzer
     - field.field.node.profil.field_profilbild
     - field.field.node.profil.field_referenztool
+    - field.field.node.profil.field_show_phone_number
     - field.field.node.profil.field_showemail
     - field.field.node.profil.field_studiengang
+    - field.field.node.profil.field_telefonnummer
     - field.field.node.profil.field_user_uid
     - node.type.profil
   module:
@@ -37,12 +40,15 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_abteilung: true
   field_analysetool: true
   field_anzahl_literaturreviews: true
   field_datenbanken: true
   field_nutzer: true
   field_profilbild: true
   field_referenztool: true
+  field_show_phone_number: true
   field_showemail: true
   field_studiengang: true
+  field_telefonnummer: true
   field_user_uid: true

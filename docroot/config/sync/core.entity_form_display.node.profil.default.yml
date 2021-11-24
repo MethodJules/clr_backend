@@ -4,14 +4,17 @@ status: true
 dependencies:
   config:
     - field.field.node.profil.body
+    - field.field.node.profil.field_abteilung
     - field.field.node.profil.field_analysetool
     - field.field.node.profil.field_anzahl_literaturreviews
     - field.field.node.profil.field_datenbanken
     - field.field.node.profil.field_nutzer
     - field.field.node.profil.field_profilbild
     - field.field.node.profil.field_referenztool
+    - field.field.node.profil.field_show_phone_number
     - field.field.node.profil.field_showemail
     - field.field.node.profil.field_studiengang
+    - field.field.node.profil.field_telefonnummer
     - field.field.node.profil.field_user_uid
     - image.style.thumbnail
     - node.type.profil
@@ -40,6 +43,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_abteilung:
+    weight: 136
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_analysetool:
     weight: 126
     settings:
@@ -89,6 +100,13 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_show_phone_number:
+    weight: 134
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_showemail:
     weight: 132
     settings:
@@ -98,6 +116,14 @@ content:
     region: content
   field_studiengang:
     weight: 122
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_telefonnummer:
+    weight: 137
     settings:
       size: 60
       placeholder: ''

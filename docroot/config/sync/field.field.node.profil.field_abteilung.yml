@@ -1,0 +1,19 @@
+uuid: 15434260-d626-44fd-a984-f6e22f98e29e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_abteilung
+    - node.type.profil
+id: node.profil.field_abteilung
+field_name: field_abteilung
+entity_type: node
+bundle: profil
+label: Abteilung
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

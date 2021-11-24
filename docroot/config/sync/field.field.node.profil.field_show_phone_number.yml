@@ -1,0 +1,23 @@
+uuid: 570a7336-0324-4ebd-b61c-15e5021da90b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_show_phone_number
+    - node.type.profil
+id: node.profil.field_show_phone_number
+field_name: field_show_phone_number
+entity_type: node
+bundle: profil
+label: show_phone_number
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

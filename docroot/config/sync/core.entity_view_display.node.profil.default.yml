@@ -4,14 +4,17 @@ status: true
 dependencies:
   config:
     - field.field.node.profil.body
+    - field.field.node.profil.field_abteilung
     - field.field.node.profil.field_analysetool
     - field.field.node.profil.field_anzahl_literaturreviews
     - field.field.node.profil.field_datenbanken
     - field.field.node.profil.field_nutzer
     - field.field.node.profil.field_profilbild
     - field.field.node.profil.field_referenztool
+    - field.field.node.profil.field_show_phone_number
     - field.field.node.profil.field_showemail
     - field.field.node.profil.field_studiengang
+    - field.field.node.profil.field_telefonnummer
     - field.field.node.profil.field_user_uid
     - node.type.profil
   module:
@@ -29,6 +32,14 @@ content:
     weight: 101
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_abteilung:
+    weight: 116
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_analysetool:
     weight: 106
@@ -80,6 +91,16 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_show_phone_number:
+    weight: 114
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_showemail:
     weight: 112
     label: above
@@ -92,6 +113,14 @@ content:
     region: content
   field_studiengang:
     weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_telefonnummer:
+    weight: 117
     label: above
     settings:
       link_to_entity: false
