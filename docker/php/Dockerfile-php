@@ -1,0 +1,18 @@
+FROM bitnami/php-fpm:7.3.27
+
+RUN apt-get update && apt-get install -y \
+		curl \
+		git \
+		vim \
+		wget \
+		postgresql-client
+
+# php ini
+# COPY php.ini /opt/bitnami/php/etc/conf.d/php.ini
+
+#Install composer
+RUN wget https://getcomposer.org/installer
+RUN mv installer composer-setup.php
+RUN	php composer-setup.php
+RUN	mv composer.phar /usr/local/bin/composer
+RUN	php -r "unlink('composer-setup.php');"

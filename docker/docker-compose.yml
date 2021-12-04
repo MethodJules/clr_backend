@@ -14,22 +14,44 @@ services:
   clr_backend_d8_drupal:
     depends_on:
       - clr_backend_d8_db
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     build: .
-    #ports:
-    #  - "8080:80"
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.clr_backend_d8_drupal.entrypoints=http"
-      - "traefik.http.routers.clr_backend_d8_drupal.rule=Host(`clr-backend.ddns.net`,`clr-backend.x-navi.de`)"
-      - "traefik.http.middlewares.clr_backend_d8_drupal-https-redirect.redirectscheme.scheme=https"
-      - "traefik.http.routers.clr_backend_d8_drupal.middlewares=clr_backend_d8_drupal-https-redirect"
-      - "traefik.http.routers.clr_backend_d8_drupal-secure.entrypoints=https"
-      - "traefik.http.routers.clr_backend_d8_drupal-secure.rule=Host(`clr-backend.ddns.net`,`clr-backend.x-navi.de`)"
-      - "traefik.http.routers.clr_backend_d8_drupal-secure.tls=true"
-      - "traefik.http.routers.clr_backend_d8_drupal-secure.tls.certresolver=http"
-      - "traefik.http.routers.clr_backend_d8_drupal-secure.service=clr_backend_d8_drupal"
-      - "traefik.http.services.clr_backend_d8_drupal.loadbalancer.server.port=80"
-      - "traefik.docker.network=proxy"
+    ports:
+      - "8080:80"
+  #apache:
+  #  container_name: "clr_apache"
+  #  image: bitnami/apache:2.4.41
+  #  volumes:
+  #    - ../docroot:/app:delegated
+  #    - ../docker/apache/dipas_vhost.conf:/vhosts/my_vhost.conf:ro
+  #  ports: 
+  #    - "8080:8080"
+  #  depends_on: 
+  #    - php 
+  #php:
+  #  container_name: "clr_php"
+  #  extra_hosts:
+  #    - "host.docker.internal:host-gateway"
+  #  build:
+  #    context: ./php
+  #    dockerfile: Dockerfile-php
+  #  volumes:
+  #    - ../docroot:/app:delegated
+  #    - ./php/php.ini:/opt/bitnami/php/etc/conf.d/php.ini:ro
+    #labels:
+    #  - "traefik.enable=true"
+    #  - "traefik.http.routers.clr_backend_d8_drupal.entrypoints=http"
+    #  - "traefik.http.routers.clr_backend_d8_drupal.rule=Host(`clr-backend.ddns.net`,`clr-backend.x-navi.de`)"
+    #  - "traefik.http.middlewares.clr_backend_d8_drupal-https-redirect.redirectscheme.scheme=https"
+    #  - "traefik.http.routers.clr_backend_d8_drupal.middlewares=clr_backend_d8_drupal-https-redirect"
+    #  - "traefik.http.routers.clr_backend_d8_drupal-secure.entrypoints=https"
+    #  - "traefik.http.routers.clr_backend_d8_drupal-secure.rule=Host(`clr-backend.ddns.net`,`clr-backend.x-navi.de`)"
+    #  - "traefik.http.routers.clr_backend_d8_drupal-secure.tls=true"
+    #  - "traefik.http.routers.clr_backend_d8_drupal-secure.tls.certresolver=http"
+    #  - "traefik.http.routers.clr_backend_d8_drupal-secure.service=clr_backend_d8_drupal"
+    #  - "traefik.http.services.clr_backend_d8_drupal.loadbalancer.server.port=80"
+    #  - "traefik.docker.network=proxy"
     volumes:
       - ../docroot:/app
     networks:
