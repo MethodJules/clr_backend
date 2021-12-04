@@ -12,3 +12,22 @@ function clr_user_presave(EntityInterface $entity) {
      $entity->addRole('student');
  }
 }
+
+/**
+* Implements hook_ENTITY_TYPE_insert().
+*/
+
+function clr_node_insert(Drupal\Core\Entity\EntityInterface $entity) {
+    if($entity->bundle == 'projekt') {
+        // Get taxonomy
+        $phases = "";
+    }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_update().
+ */
+function clr_node_update(Drupal\Core\Entity\EntityInterface $entity) {
+  $phases = "";
+  $_1 = 1;
+}
