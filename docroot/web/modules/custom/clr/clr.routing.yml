@@ -1,0 +1,7 @@
+clr.test:
+  path: '/clr/test'
+  defaults:
+    _controller: '\Drupal\clr\Controller\CLRController::content'
+    _title: 'CLR Title'
+  requirements:
+    _permission: 'access content'

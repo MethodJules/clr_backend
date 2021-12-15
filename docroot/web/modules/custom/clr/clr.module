@@ -1,6 +1,7 @@
 <?php
 
 use Drupal\Core\Entity\EntityInterface;
+use Drupal\node\Entity\Node;
 
 /**
  * Implements hook_ENTITY_TYPE_presave()
@@ -11,4 +12,75 @@ function clr_user_presave(EntityInterface $entity) {
  if($entity->isNew()) {
      $entity->addRole('student');
  }
+}
+
+/**
+* Implements hook_ENTITY_TYPE_insert().
+*/
+
+function clr_node_insert(Node $node) {
+    if($node->getType() == 'phase_vorgehensmodell') {
+        // Get values from phase_vorgehensmodell node
+        $nid = $node->id();
+        $phase_id = $node->field_phase_number->value;
+
+        // Get dozent lecturer tools with phase_id
+        switch ($phase_id) {
+            case 0:
+                $tid = 10;
+                break;
+            case 1:
+                $tid = 1;
+                break;
+            case 2:
+                $tid = 2;
+                break;
+            case 3:
+                $tid = 3;
+                break;
+            case 4:
+                $tid = 4;
+                break;
+            case 5:
+                $tid = 5;
+                break;
+            case 6:
+                $tid = 6;
+                break;
+            case 7:
+                $tid = 11;
+                break;
+        }
+        $nodes =  \Drupal::entityTypeManager()->getStorage('node')->loadByProperties(['field_phase_term' => $tid]);
+        foreach($nodes as $node) {
+            if ($node->getType() == 'lecturertools') {
+                // create tool
+                $tool = \Drupal\node\Entity\Node::create(['type' => 'tools']);
+                $tool->title = $node->title->value;
+                $tool->field_benutzt = ['value' => '0'];
+                $tool->field_phasenid = $nid;
+                $tool->save();
+            }
+            if ($node->getType() == 'lecturerfiles') {
+                // get file id 
+                $file = $node->field_documentid->entity;
+                $file_id = $file->id();
+                // create files
+                $tool = \Drupal\node\Entity\Node::create(['type' => 'inputdateien']);
+                $tool->title = $node->title->value;
+                $tool->field_documentid = $file_id;
+                $tool->field_phasenid = $nid;
+                $tool->save();
+            }
+            
+        }
+        
+    }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_update().
+ */
+function clr_node_update(Node $node) {
+   
 }
