@@ -16,16 +16,16 @@
     ],
     "require": {
         "composer/installers": "^1.2",
-        "drupal/chatbot_api": "^1.0",
+        "cweagans/composer-patches": "^1.7",
+        "drupal/chatbot_api": "^2.0@RC",
         "drupal/console": "~1.0",
-        "drupal/core-composer-scaffold": "^8.8",
-        "drupal/core-project-message": "^8.8",
-        "drupal/core-recommended": "^8.8",
+        "drupal/core-composer-scaffold": "^9",
+        "drupal/core-project-message": "^9",
+        "drupal/core-recommended": "^9",
         "drupal/devel": "^4.1",
         "drupal/jsonapi_extras": "^3.16",
         "drupal/rest_export_nested": "^1.0",
         "drupal/restui": "^1.20",
-        "drupal/upgrade_status": "^3.9",
         "drupal/views_data_export": "^1.0",
         "drupal/views_field_view": "^1.0@beta",
         "drush/drush": "^10.3",
@@ -91,6 +91,11 @@
                 "  * Remove the plugin that prints this message:",
                 "      composer remove drupal/core-project-message"
             ]
-        }
+        },
+	"patches": {
+      		"drupal/core": {
+        		"confusing error & behavior when creating a new referenced entity containing parentheses": "https://www.drupal.org/files/issues/2021-04-18/2924783-18.patch"
+      		}
+    	}
     }
 }

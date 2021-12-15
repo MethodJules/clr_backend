@@ -1,0 +1,32 @@
+uuid: c628a4f7-5b69-4516-92c9-ed72a38899ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.lecturertools.body
+    - field.field.node.lecturertools.field_phase_term
+    - node.type.lecturertools
+  module:
+    - text
+    - user
+id: node.lecturertools.teaser
+targetEntityType: node
+bundle: lecturertools
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_phase_term: true

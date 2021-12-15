@@ -1,7 +1,18 @@
 uuid: 3e4396d7-348b-45f0-a3d7-f2ebe805509b
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.restricted_html
+    - rest.resource.user_registration
+  module:
+    - comment
+    - contact
+    - filter
+    - media
+    - rest
+    - search
+    - system
 _core:
   default_config_hash: pq_mEIu_B4widZN7Ap81iCJSjShFFdcL0jEiCi8VrDk
 id: anonymous

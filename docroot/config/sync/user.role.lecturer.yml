@@ -1,7 +1,14 @@
 uuid: ab873d0e-1587-4cd2-b8de-3cafaa92143d
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - node.type.profil
+    - node.type.projekt
+    - rest.resource.clr_resource
+  module:
+    - node
+    - rest
 id: lecturer
 label: Dozent
 weight: 4

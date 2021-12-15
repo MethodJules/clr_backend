@@ -1,0 +1,22 @@
+uuid: 6da4acfa-9f2b-44c5-a2b5-86d1c84bddb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.lecturerfiles
+id: node.lecturerfiles.promote
+field_name: promote
+entity_type: node
+bundle: lecturerfiles
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

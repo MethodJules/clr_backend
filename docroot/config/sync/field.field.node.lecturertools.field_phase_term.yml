@@ -1,0 +1,29 @@
+uuid: 0a2876f1-0cbf-4114-887f-25ca0c8bc645
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_phase_term
+    - node.type.lecturertools
+    - taxonomy.vocabulary.phase
+id: node.lecturertools.field_phase_term
+field_name: field_phase_term
+entity_type: node
+bundle: lecturertools
+label: Phase
+description: 'Wählen Sie alle Phasen aus, zu denen das Tool passt.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      phase: phase
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

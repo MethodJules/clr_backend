@@ -1,0 +1,27 @@
+uuid: 21272e84-54c4-468d-9ac7-f7825f37e486
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_documentid
+    - node.type.lecturerfiles
+  module:
+    - file
+id: node.lecturerfiles.field_documentid
+field_name: field_documentid
+entity_type: node
+bundle: lecturerfiles
+label: Hilfsdokument
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'pdf docx doc xlsx xls pptx ppt jpg jpeg png zip'
+  max_filesize: ''
+  description_field: false
+field_type: file

@@ -1,0 +1,29 @@
+uuid: d300fb10-4e9e-46ca-ac4d-1887a1a16486
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_phase_term
+    - node.type.lecturerfiles
+    - taxonomy.vocabulary.phase
+id: node.lecturerfiles.field_phase_term
+field_name: field_phase_term
+entity_type: node
+bundle: lecturerfiles
+label: Phase
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      phase: phase
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

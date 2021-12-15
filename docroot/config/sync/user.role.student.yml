@@ -1,31 +1,59 @@
 uuid: 141a7b5d-4223-4c52-abef-b33756921ff4
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - node.type.concept
+    - node.type.concept_map
+    - node.type.inputdateien
+    - node.type.outputdateien
+    - node.type.phase_vorgehensmodell
+    - node.type.profil
+    - node.type.projekt
+    - node.type.reflexionstemplate
+    - node.type.relationship
+    - node.type.relationshiplog
+    - node.type.to_dos
+    - node.type.tools
+    - rest.resource.clr_resource
+  module:
+    - node
+    - rest
 id: student
 label: Student
 weight: 3
 is_admin: null
 permissions:
   - 'access user profiles'
-  - 'create gruppe content'
+  - 'create concept content'
+  - 'create concept_map content'
   - 'create inputdateien content'
   - 'create outputdateien content'
   - 'create phase_vorgehensmodell content'
   - 'create profil content'
   - 'create projekt content'
   - 'create reflexionstemplate content'
+  - 'create relationship content'
+  - 'create relationshiplog content'
   - 'create to_dos content'
   - 'create tools content'
   - 'delete any inputdateien content'
   - 'delete any outputdateien content'
   - 'delete any to_dos content'
+  - 'delete own concept content'
+  - 'delete own concept_map content'
+  - 'delete own relationship content'
+  - 'delete own relationshiplog content'
   - 'edit any inputdateien content'
   - 'edit any outputdateien content'
   - 'edit any phase_vorgehensmodell content'
   - 'edit any projekt content'
   - 'edit any to_dos content'
   - 'edit any tools content'
+  - 'edit own concept content'
+  - 'edit own concept_map content'
   - 'edit own profil content'
   - 'edit own reflexionstemplate content'
+  - 'edit own relationship content'
+  - 'edit own relationshiplog content'
   - 'restful get clr_resource'

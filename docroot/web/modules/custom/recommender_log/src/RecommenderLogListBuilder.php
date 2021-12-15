@@ -87,7 +87,7 @@ class RecommenderLogListBuilder extends EntityListBuilder {
    */
   public function buildRow(EntityInterface $entity) {
     /* @var $entity \Drupal\recommender_log\RecommenderLogInterface */
-    $row['id'] = $entity->link();
+    $row['id'] = $entity->toLink();
     return $row + parent::buildRow($entity);
   }
 

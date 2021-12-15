@@ -1,0 +1,34 @@
+uuid: 5ec83abf-b47a-4882-95cd-c51f46b8e4cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.lecturerfiles.body
+    - field.field.node.lecturerfiles.field_documentid
+    - field.field.node.lecturerfiles.field_phase_term
+    - node.type.lecturerfiles
+  module:
+    - text
+    - user
+id: node.lecturerfiles.teaser
+targetEntityType: node
+bundle: lecturerfiles
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_documentid: true
+  field_phase_term: true

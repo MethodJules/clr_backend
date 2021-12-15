@@ -11,6 +11,9 @@ field_name: field_profilbild
 entity_type: node
 type: image
 settings:
+  target_type: file
+  display_field: false
+  display_default: false
   uri_scheme: public
   default_image:
     uuid: fbad1f57-e0e7-4e39-a771-a289c753c1b6
@@ -18,9 +21,6 @@ settings:
     title: ''
     width: 820
     height: 860
-  target_type: file
-  display_field: false
-  display_default: false
 module: image
 locked: false
 cardinality: 1

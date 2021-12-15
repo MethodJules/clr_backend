@@ -1,0 +1,47 @@
+uuid: bfd0e0af-be4a-4fa4-9b5c-e9f281f719b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.lecturerfiles.body
+    - field.field.node.lecturerfiles.field_documentid
+    - field.field.node.lecturerfiles.field_phase_term
+    - node.type.lecturerfiles
+  module:
+    - file
+    - text
+    - user
+id: node.lecturerfiles.default
+targetEntityType: node
+bundle: lecturerfiles
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_documentid:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_phase_term:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

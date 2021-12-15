@@ -1,0 +1,23 @@
+uuid: 7c3034e2-32fd-424e-9274-ada67b44a5b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.lecturertools
+  module:
+    - text
+id: node.lecturertools.body
+field_name: body
+entity_type: node
+bundle: lecturertools
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary
