@@ -1,4 +1,4 @@
-FROM drupal:8.9-apache
+FROM drupal:9.2-apache
 
 RUN apt-get update && apt-get install -y \
 	curl \
@@ -39,5 +39,7 @@ RUN pecl install xdebug \
 # Set timezone
 ENV TZ=Europe/Berlin
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+RUN cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini
+COPY php/php.ini /usr/local/etc/php/conf.d/php.ini
 
 WORKDIR /app
