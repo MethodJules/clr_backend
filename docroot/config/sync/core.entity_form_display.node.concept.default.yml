@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.concept.body
     - field.field.node.concept.field_concept_map_id
+    - field.field.node.concept.field_uid
     - node.type.concept
   module:
     - path
@@ -33,6 +34,14 @@ content:
   field_concept_map_id:
     type: string_textfield
     weight: 122
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_uid:
+    type: string_textfield
+    weight: 123
     region: content
     settings:
       size: 60

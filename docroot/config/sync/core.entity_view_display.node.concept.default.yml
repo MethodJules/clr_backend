@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.concept.body
     - field.field.node.concept.field_concept_map_id
+    - field.field.node.concept.field_uid
     - node.type.concept
   module:
     - text
@@ -28,6 +29,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 102
+    region: content
+  field_uid:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 103
     region: content
   links:
     settings: {  }

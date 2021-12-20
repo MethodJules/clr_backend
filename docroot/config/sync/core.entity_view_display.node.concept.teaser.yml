@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.concept.body
     - field.field.node.concept.field_concept_map_id
+    - field.field.node.concept.field_uid
     - node.type.concept
   module:
     - text
@@ -30,3 +31,4 @@ content:
     region: content
 hidden:
   field_concept_map_id: true
+  field_uid: true
