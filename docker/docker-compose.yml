@@ -1,6 +1,7 @@
 version: '3'
 services:
   clr_backend_d8_db:
+    container_name: clr-db
     image: mysql:5.7
     command: --max_allowed_packet=32505856 #Set max_allowed_packet to 256M
     environment:
@@ -12,6 +13,7 @@ services:
       - clr_backend_d8_db_data:/var/lib/mysql
     restart: always
   clr_backend_d8_drupal:
+    container_name: clr-drupal
     depends_on:
       - clr_backend_d8_db
     extra_hosts:
