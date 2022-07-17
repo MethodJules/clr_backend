@@ -2,6 +2,7 @@
 
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\node\Entity\Node;
+use Drupal\clr\Helper\CLRRecommenderLog;
 
 /**
  * Implements hook_ENTITY_TYPE_presave()
@@ -84,3 +85,55 @@ function clr_node_insert(Node $node) {
 function clr_node_update(Node $node) {
    
 }
+
+/**
+* Implements hook_cron().
+*/
+
+function clr_cron() {
+
+    // Just get the data from recommender log
+    $clrRecommenderLog = new CLRRecommenderLog();
+    $data = $clrRecommenderLog->get();
+
+    // Now we want to send it to an endpoint
+    $model_id = 11111; // We have to ask what this id is and where it will come from! 
+    $client =  \Drupal::httpClient();
+    $request = $client->post("http://147.172.178.30:5000/" . $model_id, ['json' => $data]);
+    $response = json_decode($request->getBody());
+
+    // do something with $response
+
+    /*
+        // Short-running operation example, not using a queue:
+        // Delete all expired records since the last cron run.
+        $expires = \Drupal::state()->get('mymodule.last_check', 0);
+        \Drupal::database()->delete('mymodule_table')
+            ->condition('expires', $expires, '>=')
+            ->execute();
+        \Drupal::state()->set('mymodule.last_check', REQUEST_TIME);
+    
+        // Long-running operation example, leveraging a queue:
+        // Queue news feeds for updates once their refresh interval has elapsed.
+        $queue = \Drupal::queue('aggregator_feeds');
+        $ids = \Drupal::entityTypeManager()->getStorage('aggregator_feed')->getFeedIdsToRefresh();
+        foreach (Feed::loadMultiple($ids) as $feed) {
+            if ($queue->createItem($feed)) {
+                // Add timestamp to avoid queueing item more than once.
+                $feed->setQueuedTime(REQUEST_TIME);
+                $feed->save();
+            }
+        }
+        $ids = \Drupal::entityQuery('aggregator_feed')
+            ->condition('queued', REQUEST_TIME - (3600 * 6), '<')
+            ->execute();
+        if ($ids) {
+            $feeds = Feed::loadMultiple($ids);
+            foreach ($feeds as $feed) {
+                $feed->setQueuedTime(0);
+                $feed->save();
+            }
+        }
+    */
+}
+
