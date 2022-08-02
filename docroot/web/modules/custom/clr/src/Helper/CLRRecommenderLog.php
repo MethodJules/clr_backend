@@ -2,15 +2,10 @@
 
 namespace Drupal\clr\Helper;
 
-use Drupal\rest\ResourceResponse;
 use Drupal\recommender_log\Entity\RecommenderLog;
 
 
 class CLRRecommenderLog {
-/**
-   * Responds to entity GET requests
-   * @return \Drupal\Rest\ResourceResponse
-   */
   public function get() {
 
     $rlids = \Drupal::entityQuery('recommender_log')->sort('field_timestamp', 'DESC')->execute();
@@ -20,15 +15,15 @@ class CLRRecommenderLog {
     foreach ($recommenderLogs as $recommenderLog) {
        
         $data[] = [
-            'id' => $recommenderLog->id(),
-            'timestamp' => $recommenderLog->get('field_timestamp')->value,
+            'id' => intval($recommenderLog->id()),
+            'timestamp' => intval($recommenderLog->get('field_timestamp')->value),
             'event' => $recommenderLog->get('field_event')->value,
-            'user_id' => $recommenderLog->get('field_user_id')->value,
-            'conceptmap_id' => $recommenderLog->get('field_conceptmap_id')->value,
+            'user_id' => intval($recommenderLog->get('field_user_id')->value),
+            'conceptmap_id' => intval($recommenderLog->get('field_conceptmap_id')->value),
             'conceptmap_name' => $recommenderLog->get('field_conceptmap_name')->value,
-            'conceptmap_tags' => $recommenderLog->get('field_conceptmap_tags')->value,
-            'concepts' => $recommenderLog->get('field_concepts')->value,
-            'recommender_concept' => $recommenderLog->get('field_recommender_concept')->value,
+            'conceptmap_tags' => !is_null($recommenderLog->get('field_conceptmap_tags')->value) ? explode(',', $recommenderLog->get('field_conceptmap_tags')->value) : [],
+            'concepts' => !is_null($recommenderLog->get('field_concepts')->value) ? json_decode($recommenderLog->get('field_concepts')->value) : [],
+            'recommender_concept' => !is_null($recommenderLog->get('field_recommender_concept')->value) ? $recommenderLog->get('field_recommender_concept')->value : "",
         ]; 
     }
 
@@ -38,8 +33,15 @@ class CLRRecommenderLog {
         $bar[] = $foo[0];
     }
     
-    $response = new ResourceResponse($bar);
+    $response = $bar;
     return $response;
+  }
+
+
+  public function getConceptMapData($concept_map_id) {
+    //Get all concept map data
+    $all_concept_map_data = $this->get();
+
   }
 
   /**

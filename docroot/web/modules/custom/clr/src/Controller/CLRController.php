@@ -3,6 +3,8 @@
 namespace Drupal\clr\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\clr\Helper\CLRRecommenderLog;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 class CLRController extends ControllerBase {
     public function content() {
@@ -81,6 +83,28 @@ class CLRController extends ControllerBase {
         $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($tid);
         $termy = $term;
         return $termy->getWeight();
+    }
+
+    public function predictConceptMap($concept_map_id) {
+        // Just get the data from recommender log
+        $clrRecommenderLog = new CLRRecommenderLog();
+        $data = $clrRecommenderLog->get();
+        // $concept_map_id = 8680;
+
+        $concept_map_data = array_filter($data, function($value) use ($concept_map_id) {
+            if($value["conceptmap_id"] == $concept_map_id) {
+                return $value;
+            };
+        });
+
+        $concept_map_data = array_values($concept_map_data);
+        $concept_map_data = $concept_map_data;
+
+        // $client =  \Drupal::httpClient();
+        //$request = $client->post("http://147.172.178.30:5000/concept_recommender/training/" . "1", ['json' => $data]);
+        // $response = json_decode($request->getBody());
+        
+        return new JsonResponse($concept_map_data[0]);
     }
 
 }

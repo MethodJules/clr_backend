@@ -5,3 +5,11 @@ clr.test:
     _title: 'CLR Title'
   requirements:
     _permission: 'access content'
+
+clr.prediction:
+  path: '/clr/prediction/{concept_map_id}'
+  defaults:
+    _controller: '\Drupal\clr\Controller\CLRController::predictConceptMap'
+    _title: 'CLR Prediction'
+  requirements:
+    _permission: 'access content'
